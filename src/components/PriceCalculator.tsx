@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Calculator, Package, Shirt, Trophy } from "lucide-react";
+import Link from "next/link";
 
 export const PriceCalculator: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<"custom" | "uniform">("custom");
@@ -15,7 +16,7 @@ export const PriceCalculator: React.FC = () => {
   const calculateCustomPrice = () => {
     const basePrices = {
       tshirt: { none: 980, single: 1300, double: 1600 },
-      polo: { none: 1180, single: 1500, double: 1800 }
+      polo: { none: 1980, single: 2200, double: 2500 }
     };
     
     const basePrice = basePrices[productType][printSides];
@@ -44,20 +45,19 @@ export const PriceCalculator: React.FC = () => {
   const priceInfo = selectedPlan === "custom" ? calculateCustomPrice() : calculateUniformPrice();
 
   return (
-    <section className="py-16 bg-gradient-to-br from-sparkle-pink/10 to-sparkle-turquoise/10">
+    <div className="py-16 bg-gradient-to-br from-sparkle-pink/10 to-sparkle-turquoise/10">
       <div className="px-4">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            圧倒的コスパ！選べる2つの料金プラン
+            圧倒的コスパ！<br />選べる2つの料金プラン
           </h2>
           <p className="text-gray-600 text-lg">
             用途に合わせて最適なプランをお選びください
           </p>
-        </div>
-
+        </div> */}
         <div className="max-w-6xl mx-auto">
           {/* プラン選択タブ */}
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
+          {/* <div className="flex flex-col md:flex-row gap-4 mb-8">
             <button
               onClick={() => setSelectedPlan("custom")}
               className={`flex-1 p-6 rounded-2xl border-2 transition-all ${
@@ -91,46 +91,48 @@ export const PriceCalculator: React.FC = () => {
                 選ぶだけで簡単！16種類のテンプレートから選ぶだけで本格的なユニフォームが完成
               </p>
             </button>
-          </div>
-
+          </div> */}
           {/* 料金表と計算機 */}
           <div className="bg-white rounded-3xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+              簡単お見積もり計算機
+            </h2>
             {selectedPlan === "custom" ? (
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-center">
+                <h3 className="hidden">
                   プラン①：自由なデザインで作る！【クラT・ポロシャツ】
                 </h3>
                 
                 {/* 料金表 */}
-                <div className="mb-8 overflow-x-auto">
-                  <table className="w-full border-collapse">
+                <div className="mb-8 overflow-x-auto max-w-4xl mx-auto">
+                  <table className="w-full border-collapse min-w-[600px]">
                     <thead>
                       <tr className="bg-gray-100">
-                        <th className="border p-3 text-left">商品</th>
-                        <th className="border p-3 text-center">① 無地</th>
-                        <th className="border p-3 text-center">② 片面プリント<br /><span className="text-sm font-normal">(前面 or 背面)</span></th>
-                        <th className="border p-3 text-center">③ 両面プリント<br /><span className="text-sm font-normal">(前面 ＋ 背面)</span></th>
+                        <th className="border p-4 text-left w-1/5">商品</th>
+                        <th className="border p-4 text-center w-1/5">① 無地</th>
+                        <th className="border p-4 text-center w-1/5">② 片面プリント<br /><span className="text-sm font-normal">(前面 or 背面)</span></th>
+                        <th className="border p-4 text-center w-1/5">③ 両面プリント<br /><span className="text-sm font-normal">(前面 ＋ 背面)</span></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border p-3 font-bold">Tシャツ</td>
-                        <td className="border p-3 text-center">980円</td>
-                        <td className="border p-3 text-center font-bold text-sparkle-pink">1,300円</td>
-                        <td className="border p-3 text-center">1,600円</td>
+                        <td className="border p-4 font-bold">Tシャツ</td>
+                        <td className="border p-4 text-center">980円</td>
+                        <td className="border p-4 text-center font-bold text-sparkle-pink">1,300円</td>
+                        <td className="border p-4 text-center">1,600円</td>
                       </tr>
                       <tr>
-                        <td className="border p-3 font-bold">ポロシャツ</td>
-                        <td className="border p-3 text-center">1,180円</td>
-                        <td className="border p-3 text-center font-bold text-sparkle-pink">1,500円</td>
-                        <td className="border p-3 text-center">1,800円</td>
+                        <td className="border p-4 font-bold">ポロシャツ</td>
+                        <td className="border p-4 text-center">1,980円</td>
+                        <td className="border p-4 text-center font-bold text-sparkle-pink">2,200円</td>
+                        <td className="border p-4 text-center">2,500円</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
                 {/* 選択フォーム */}
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
                   <div className="space-y-6">
                     <div>
                       <label className="block text-sm font-bold mb-2">商品タイプ</label>
@@ -195,35 +197,57 @@ export const PriceCalculator: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-sm font-bold mb-2">数量（枚）</label>
-                      <input
-                        type="number"
-                        min="1"
-                        value={quantity}
-                        onChange={(e) => setQuantity(Number(e.target.value))}
-                        className="w-full p-3 border-2 border-gray-200 rounded-lg"
-                      />
-                    </div>
+                  <div>
+                    <label className="block text-sm font-bold mb-2">数量（枚）</label>
+                    <input
+                      type="number"
+                      min="1"
+                      value={quantity}
+                      onChange={(e) => setQuantity(Number(e.target.value))}
+                      className="w-full p-3 border-2 border-gray-200 rounded-lg"
+                    />
+                  </div>
 
-                    <div>
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={sizeProtection}
-                          onChange={(e) => setSizeProtection(e.target.checked)}
-                          className="mr-3 w-5 h-5"
-                        />
-                        <span>サイズ交換保証を追加（1枚500円）</span>
+                  <div>
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={sizeProtection}
+                        onChange={(e) => setSizeProtection(e.target.checked)}
+                        className="mr-3 w-5 h-5"
+                      />
+                      <span>サイズ交換保証を追加（1枚500円）</span>
+                    </label>
+                  </div>
+                  
+                  {/* デザインデータアップロード */}
+                  <div className="mt-6">
+                    <h4 className="text-lg font-bold mb-3">デザインデータをアップロード</h4>
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-sparkle-turquoise transition-colors">
+                      <input
+                        type="file"
+                        accept=".png,.jpg,.jpeg,.pdf,.ai,.psd"
+                        multiple
+                        className="hidden"
+                        id="design-upload"
+                      />
+                      <label htmlFor="design-upload" className="cursor-pointer">
+                        <div className="text-gray-500">
+                          <Package className="mx-auto mb-2" size={32} />
+                          <p className="text-sm mb-1">クリックしてファイルを選択</p>
+                          <p className="text-xs text-gray-400">PNG, JPG, PDF, AI, PSD対応</p>
+                        </div>
                       </label>
                     </div>
+                    <p className="text-xs text-gray-500 mt-2">
+                      ※ デザインデータは見積もり確定後にお送りいただくことも可能です
+                    </p>
                   </div>
                 </div>
               </div>
             ) : (
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-center">
+                <h3 className="hidden">
                   プラン②：選ぶだけで簡単！【ユニフォーム風カスタムTシャツ】
                 </h3>
                 
@@ -265,32 +289,30 @@ export const PriceCalculator: React.FC = () => {
                 </div>
 
                 {/* 選択フォーム */}
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-sm font-bold mb-2">プラン選択</label>
-                      <div className="space-y-2">
-                        <button
-                          onClick={() => setUniformOption("basic")}
-                          className={`w-full py-3 px-4 rounded-lg text-left transition ${
-                            uniformOption === "basic"
-                              ? "bg-sparkle-turquoise text-white"
-                              : "bg-gray-100 hover:bg-gray-200"
-                          }`}
-                        >
-                          基本プラン（前面プリント込み）
-                        </button>
-                        <button
-                          onClick={() => setUniformOption("double")}
-                          className={`w-full py-3 px-4 rounded-lg text-left transition ${
-                            uniformOption === "double"
-                              ? "bg-sparkle-turquoise text-white"
-                              : "bg-gray-100 hover:bg-gray-200"
-                          }`}
-                        >
-                          両面プラン（前面＋背面プリント）
-                        </button>
-                      </div>
+                <div className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-bold mb-2">プラン選択</label>
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => setUniformOption("basic")}
+                        className={`w-full py-3 px-4 rounded-lg text-left transition ${
+                          uniformOption === "basic"
+                            ? "bg-sparkle-turquoise text-white"
+                            : "bg-gray-100 hover:bg-gray-200"
+                        }`}
+                      >
+                        基本プラン（前面プリント込み）
+                      </button>
+                      <button
+                        onClick={() => setUniformOption("double")}
+                        className={`w-full py-3 px-4 rounded-lg text-left transition ${
+                          uniformOption === "double"
+                            ? "bg-sparkle-turquoise text-white"
+                            : "bg-gray-100 hover:bg-gray-200"
+                        }`}
+                      >
+                        両面プラン（前面＋背面プリント）
+                      </button>
                     </div>
 
                     <div>
@@ -336,7 +358,7 @@ export const PriceCalculator: React.FC = () => {
             {/* 価格表示 */}
             <div className="mt-8 bg-gradient-to-r from-sparkle-pink/10 to-sparkle-turquoise/10 rounded-2xl p-6">
               <div className="text-center">
-                <p className="text-sm text-gray-600 mb-2">お見積もり金額</p>
+                <p className="text-sm text-gray-600 mb-2">お会計合計</p>
                 <div className="text-4xl font-bold text-sparkle-pink mb-2">
                   ¥{priceInfo.subtotal.toLocaleString()}
                   <span className="text-sm text-gray-600 ml-2">（税込）</span>
@@ -352,12 +374,12 @@ export const PriceCalculator: React.FC = () => {
               </div>
 
               <div className="mt-6 space-y-3">
-                <button className="w-full bg-sparkle-pink text-white py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition">
+                <Link href="/estimate" className="block w-full bg-sparkle-pink text-white py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition text-center">
                   正式な見積もりを依頼
-                </button>
-                <button className="w-full bg-green-500 text-white py-3 rounded-full font-bold hover:bg-green-600 transition">
+                </Link>
+                <a href="https://line.me/R/ti/p/@895gydcc" target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white py-3 rounded-full font-bold hover:bg-green-600 transition text-center">
                   LINEで相談する
-                </button>
+                </a>
               </div>
 
               <div className="mt-6 text-center">
@@ -387,6 +409,6 @@ export const PriceCalculator: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

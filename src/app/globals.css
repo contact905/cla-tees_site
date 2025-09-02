@@ -76,17 +76,18 @@
   width: 44px;
   height: 44px;
   border-radius: 9999px; /* full rounded */
-  background: rgba(255, 255, 255, 0.9);
+  background: #ec4899;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border: 3px solid #FF6B6B; /* pop color */
-  color: #FF6B6B;
+  border: 3px solid #ec4899; /* pink */
+  color: #eab308; /* yellow */
 }
 
 /* center the icons inside */
 .hero-swiper .swiper-button-next::after,
 .hero-swiper .swiper-button-prev::after {
-  font-size: 16px; /* smaller icon inside circle */
-  font-weight: 900;
+  font-size: 24px; /* even bigger arrow */
+   font-weight: 900;
+   text-shadow: -1px 0 #eab308, 1px 0 #eab308, 0 1px #eab308, 0 -1px #eab308;
 }
 
 /* position adjustment for mobile */
@@ -96,16 +97,69 @@
 /* hover effect */
 .hero-swiper .swiper-button-next:hover,
 .hero-swiper .swiper-button-prev:hover {
-  background: #FF6B6B;
-  color: #ffffff;
-  border-color: #ff8f8f;
+  background: #ec4899;
+  color: #eab308;
+  border-color: #ec4899;
 }
 
-/* pagination bullets to match pop style */
+/* disabled state should look same color */
+.hero-swiper .swiper-button-disabled {
+  opacity: 1 !important;
+  color: #eab308 !important;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* pagination bullets to match green style */
+.hero-swiper .swiper-pagination {
+  display: none !important;
+}
 .hero-swiper .swiper-pagination-bullet {
-  background: #ff8f8f;
+  background: #86efac; /* green-300 */
   opacity: 1;
 }
 .hero-swiper .swiper-pagination-bullet-active {
-  background: #FF6B6B;
+  background: #16a34a; /* green-600 */
+}
+
+/* Product swiper smaller arrows */
+.product-swiper .swiper-button-next,
+.product-swiper .swiper-button-prev {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: #ec4899;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 2px solid #ec4899;
+  color: #eab308;
+}
+.product-swiper .swiper-button-next::after,
+.product-swiper .swiper-button-prev::after {
+  font-size: 16px;
+   font-weight: 900;
+   text-shadow: -1px 0 #eab308, 1px 0 #eab308, 0 1px #eab308, 0 -1px #eab308;
+}
+
+/* Hero & Product Swiper slide scaling effect */
+.hero-swiper .swiper-slide,
+.product-swiper .swiper-slide {
+  transition: transform 0.5s ease;
+}
+
+.hero-swiper .swiper-slide-active {
+  transform: scale(1.05);
+}
+
+.product-swiper .swiper-slide-active {
+  transform: scale(1.1);
+}
+
+.hero-swiper .swiper-slide-prev,
+.hero-swiper .swiper-slide-next {
+  transform: scale(0.85);
+}
+
+.product-swiper .swiper-slide-prev,
+.product-swiper .swiper-slide-next {
+  transform: scale(0.9);
 }

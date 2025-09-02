@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Menu, X, Phone, Mail, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Menu, X, Phone, Mail, ArrowRight, Instagram } from "lucide-react";
 import { WavePatternTop, WavePatternBottom } from "@/components/WavePattern";
 import { ProductTabs } from "@/components/ProductTabs";
 import { PriceCalculator } from "@/components/PriceCalculator";
@@ -17,11 +17,7 @@ import 'swiper/css/navigation';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const slides = [
-  {
-    image: "/クラT画像/1.png",
-    title: "最安の値段出せ！\nクラT 980円！",
-    subtitle: "サイズ交換保証で安心！ぴったりのクラスTシャツにお届け",
-  },
+  
   {
     image: "/クラT画像/2.png",
     title: "先生だ ろろろT！",
@@ -32,6 +28,22 @@ export default function Home() {
     title: "オリジナル 部活Tシャツ制作",
     subtitle: "オリジナル 部活Tシャツ制作",
   },
+  {
+    image: "/templates/クラTポスター5.png",
+    title: "オリジナル 部活Tシャツ制作",
+    subtitle: "オリジナル 部活Tシャツ制作",
+  },
+  {
+    image: "/templates/クラTポスター6.png",
+    title: "オリジナル 部活Tシャツ制作",
+    subtitle: "オリジナル 部活Tシャツ制作",
+  },
+  {
+    image: "/templates/クラTポスター7.png",
+    title: "オリジナル 部活Tシャツ制作",
+    subtitle: "オリジナル 部活Tシャツ制作",
+  },
+
 ];
 
   const products = [
@@ -50,7 +62,7 @@ export default function Home() {
     {
       title: "DTFプリント",
       description: "フルカラー対応",
-      price: "1枚から可能",
+      price: "1枚から印刷可能！",
       icon: "🖨️",
       color: "bg-sparkle-turquoise",
     },
@@ -68,7 +80,7 @@ export default function Home() {
       {/* Mobile-First Container */}
       <div className="max-w-[430px] mx-auto bg-white shadow-xl min-h-screen relative">
       {/* Header - Mobile First */}
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-white">
         {/* Top Bar - Mobile Optimized */}
         <div className="bg-sparkle-pink text-white py-2">
           <div className="px-4 text-center">
@@ -187,9 +199,9 @@ export default function Home() {
                 </div>
 
                 {/* Contact Info */}
-                <div className="pt-6 border-t text-center text-sm text-gray-500">
-                  <p>📞 070-9362-9828（24時間受付）</p>
-                  <p>📧 info@s-parkle.co.jp</p>
+                <div className="pt-6 border-t text-center text-base text-gray-500">
+                  <p>📞 070-9362-9828</p>
+                <p>📧 contact@la-muse.org</p>
                 </div>
               </div>
             </div>
@@ -198,49 +210,65 @@ export default function Home() {
       </header>
 
       {/* Hero Carousel - Mobile Optimized */}
-      <section className="relative h-[42vh] min-h-[340px] max-w-2xl mx-auto px-4 overflow-hidden rounded-b-2xl">
+      <section className="relative h-[42vh] min-h-[340px] max-w-2xl mx-auto px-4 overflow-hidden rounded-b-2xl mt-4">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           spaceBetween={10}
           slidesPerView={1.2}
           centeredSlides={true}
+          centeredSlidesBounds={true}
           loop={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           navigation={true}
-          className="h-full hero-swiper"
+          speed={800}
+          className="h-full hero-swiper mb-4"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="relative">
-              <Image
-                alt={slide.title}
-                src={slide.image}
-                fill
-                className="object-cover rounded-2xl border-4 border-red-500"
-              />
+              {slide.title === "先生だ ろろろT！" ? (
+                <Link href="/products?category=teacher" className="block w-full h-full">
+                  <img
+                    alt={slide.title}
+                    src={slide.image}
+                    className="object-cover rounded-2xl border border-red-500 w-full h-full cursor-pointer hover:opacity-90 transition-opacity"
+                  />
+                </Link>
+              ) : slide.title === "オリジナル 部活Tシャツ制作" ? (
+                <Link href="/products?category=club" className="block w-full h-full">
+                  <img
+                    alt={slide.title}
+                    src={slide.image}
+                    className="object-cover rounded-2xl border border-red-500 w-full h-full cursor-pointer hover:opacity-90 transition-opacity"
+                  />
+                </Link>
+              ) : (
+                <img
+                  alt={slide.title}
+                  src={slide.image}
+                  className="object-cover rounded-2xl border border-red-500 w-full h-full"
+                />
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="mt-4 px-4">
-          <Image
-            src="/クラT画像/サイズが合わないPOP.png"
-            alt="サイズが合わない悩みがゼロ！交換保証付"
-            width={1200}
-            height={480}
-            className="w-full h-auto rounded-2xl shadow-lg"
-            priority
-          />
-        </div>
-        <div className="mt-6 space-y-3 px-4">
-          <Link
-            href="https://line.me/R/ti/p/@895gydcc"
-            className="block w-full bg-green-500 text-white py-5 px-6 rounded-full font-bold text-xl hover:bg-green-600 transition shadow-lg hover:shadow-xl"
-          >
-            🎯 LINEで無料相談
-          </Link>
-          <button className="block w-full bg-sparkle-yellow text-gray-800 py-5 px-6 rounded-full font-bold text-xl hover:bg-sparkle-yellow-light transition shadow-lg hover:shadow-xl">
-            💰 料金を見る
-          </button>
+      </section>
+
+      {/* Images Section */}
+      <section className="w-full px-4 sm:px-0">
+        <div className="w-full">
+          <a href="https://line.me/R/ti/p/@895gydcc" className="block">
+              <img
+                src="/クラT画像/LINEPOP2.JPEG"
+                alt="LINEでデザイン ずーっと無料"
+                className="w-full h-auto object-cover object-right rounded-lg sm:rounded-none mt-4 cursor-pointer hover:opacity-90 transition-opacity"
+              />
+            </a>
+          <img
+              src="/クラT画像/サイズが合わない1POP.JPEG"
+              alt="サイズが合わない悩みがゼロ！交換保証付"
+              className="w-full h-auto object-cover rounded-lg sm:rounded-none"
+            />
         </div>
       </section>
 
@@ -249,16 +277,29 @@ export default function Home() {
         <WavePatternBottom color="#ffffff" opacity={0.2} />
         <div className="px-4 relative z-10">
           <div className="text-center text-white">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 leading-tight">クラT・ユニフォーム専門店</h2>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 mb-4">
-              <div className="bg-white/20 backdrop-blur rounded-full px-6 py-3">
-                <span className="font-bold text-lg">デザイン＆見積無料</span>
+            <div className="relative">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 leading-tight">
+                クラT・ユニフォーム専門店
+              </h2>
+            </div>
+            <div className="flex flex-row justify-center gap-4 sm:gap-8 mb-4">
+              <div className="bg-white/90 backdrop-blur rounded-full w-20 h-20 sm:w-28 sm:h-28 text-gray-800 shadow-lg flex flex-col items-center justify-center aspect-square">
+                <span className="text-lg sm:text-xl mb-1">🎨</span>
+                <span className="font-bold text-sm text-center leading-tight px-1">
+                  デザイン＆<br />見積無料
+                </span>
               </div>
-              <div className="bg-white/20 backdrop-blur rounded-full px-6 py-3">
-                <span className="font-bold text-lg">納期を必ず守ります</span>
+              <div className="bg-white/90 backdrop-blur rounded-full w-20 h-20 sm:w-28 sm:h-28 text-gray-800 shadow-lg flex flex-col items-center justify-center aspect-square">
+                <span className="text-lg sm:text-xl mb-1">⚡</span>
+                <span className="font-bold text-sm text-center leading-tight px-1">
+                  納期厳守！
+                </span>
               </div>
-              <div className="bg-white/20 backdrop-blur rounded-full px-6 py-3">
-                <span className="font-bold text-lg">お支払いは後払い</span>
+              <div className="bg-white/90 backdrop-blur rounded-full w-20 h-20 sm:w-28 sm:h-28 text-gray-800 shadow-lg flex flex-col items-center justify-center aspect-square">
+                <span className="text-lg sm:text-xl mb-1">💳</span>
+                <span className="font-bold text-sm text-center leading-tight px-1">
+                  お支払いは<br />後払い
+                </span>
               </div>
             </div>
           </div>
@@ -271,9 +312,8 @@ export default function Home() {
           <div className="bg-white rounded-3xl p-6 shadow-xl text-center w-full max-w-2xl">
             <div className="flex flex-col items-center gap-6">
               <div className="flex-1 flex flex-col items-center">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 leading-tight">
-                  <span className="text-sparkle-pink">サイズ交換保証</span>で安心！<br className="sm:hidden" />
-                  ぴったりのクラスTシャツをお届け
+                <h3 className="text-lg sm:text-xl font-bold mb-4 leading-tight">
+                  <span className="text-sparkle-pink">サイズ交換保証</span>で安心！<br />ぴったりのクラスTシャツをお届け
                 </h3>
                 <p className="text-xl font-bold text-green-600 mb-6">
                   どんな事でもOK！<br />スタッフに聞いてみよう
@@ -311,19 +351,19 @@ export default function Home() {
       </section>
 
       {/* Order Flow */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 leading-tight">
             今日注文して<br />
-            <span className="text-sparkle-pink">最短明日お届け！</span>
+            <span className="text-sparkle-pink">最短5営業日でお届け！</span>
           </h2>
-          <div className="grid grid-cols-1 gap-8 mb-12">
+          <div className="grid grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="bg-sparkle-turquoise text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
                 01
               </div>
               <h3 className="text-xl font-bold mb-2">商品を選ぶ</h3>
-              <p className="text-gray-600">豊富なラインナップから選択</p>
+              <p className="text-gray-600">ラインナップから選択</p>
             </div>
             <div className="text-center">
               <div className="bg-sparkle-turquoise text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
@@ -336,99 +376,87 @@ export default function Home() {
               <div className="bg-sparkle-turquoise text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
                 03
               </div>
-              <h3 className="text-xl font-bold mb-2">注文・お届け</h3>
-              <p className="text-gray-600">最短翌日お届け可能</p>
+              <h3 className="text-xl font-bold mb-2">注文・<br />お届け</h3>
+              <p className="text-gray-600">最短翌日<br />お届け可能</p>
             </div>
           </div>
-          <div className="text-center">
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 text-sparkle-pink font-bold text-lg hover:underline"
-            >
-              詳しく見る
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+
         </div>
       </section>
 
       {/* Products Section with Tabs */}
       <ProductTabs />
 
-      {/* Special Zones Section */}
+
+      {/* 返金保証 */}
       <section className="py-16 bg-gradient-to-br from-sparkle-turquoise/10 to-sparkle-pink/10">
         <div className="px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
-            特別ゾーン
+            安心の返金保証
           </h2>
           
           <div className="space-y-6">
-            {/* サッカーユニゾーン */}
+            {/* 品質保証 */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-4 mb-4">
-                <div className="text-4xl">⚽</div>
+                <div className="text-4xl">✅</div>
                 <div>
-                  <h3 className="text-xl font-bold text-green-600">サッカーユニゾーン</h3>
-                  <p className="text-sm text-gray-600">本格的なサッカーユニフォーム</p>
+                  <h3 className="text-xl font-bold text-green-600">品質保証</h3>
+                  <p className="text-sm text-gray-600">万が一の品質不良に対応</p>
                 </div>
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                プロ仕様のデザインテンプレートで、チーム名・背番号・個人名を自由に配置。
-                前面プリント込み1,300円〜
+                プリントの剥がれ、色落ち、縫製不良など、品質に問題があった場合は
+                商品到着から30日以内であれば全額返金いたします。
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">チーム名対応</span>
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">背番号自由</span>
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">個人名OK</span>
+                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">30日間保証</span>
+                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">全額返金</span>
+                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">品質重視</span>
               </div>
             </div>
 
-            {/* バスケユニゾーン */}
+            {/* サイズ交換保証 */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-4 mb-4">
-                <div className="text-4xl">🏀</div>
+                <div className="text-4xl">📏</div>
                 <div>
-                  <h3 className="text-xl font-bold text-orange-600">バスケユニゾーン</h3>
-                  <p className="text-sm text-gray-600">迫力のバスケットユニフォーム</p>
+                  <h3 className="text-xl font-bold text-blue-600">サイズ交換保証</h3>
+                  <p className="text-sm text-gray-600">サイズが合わない場合も安心</p>
                 </div>
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                バスケ部御用達のクールなデザイン。タンクトップタイプで動きやすさ抜群。
-                前面プリント込み1,300円〜
+                注文したサイズが合わない場合、未使用・未洗濯であれば
+                商品到着から14日以内に限り、送料お客様負担で交換対応いたします。
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">タンクトップ</span>
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">動きやすい</span>
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">クールデザイン</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">14日間対応</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">サイズ交換</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">安心サポート</span>
               </div>
             </div>
 
-            {/* クラT人気デザインゾーン */}
+            {/* デザイン満足保証 */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-4 mb-4">
-                <div className="text-4xl">🔥</div>
+                <div className="text-4xl">🎨</div>
                 <div>
-                  <h3 className="text-xl font-bold text-red-600">クラT人気デザインゾーン</h3>
-                  <p className="text-sm text-gray-600">みんなが選ぶ定番デザイン</p>
+                  <h3 className="text-xl font-bold text-purple-600">デザイン満足保証</h3>
+                  <p className="text-sm text-gray-600">イメージと違った場合も対応</p>
                 </div>
               </div>
               <p className="text-sm text-gray-700 mb-4">
-                過去の実績から選ばれた人気No.1デザイン集。迷ったらコレ！
-                テンプレート使用で前面プリント込み1,300円〜
+                事前にお送りしたデザイン確認画像と大きく異なる仕上がりの場合、
+                商品到着から7日以内であれば作り直しまたは返金対応いたします。
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">人気No.1</span>
-                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">実績豊富</span>
-                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">テンプレート</span>
+                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">作り直し可</span>
+                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">満足保証</span>
               </div>
             </div>
           </div>
 
-          <div className="text-center mt-8">
-            <button className="bg-sparkle-pink text-white px-8 py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition">
-              全ゾーンを詳しく見る
-            </button>
-          </div>
+
         </div>
       </section>
 
@@ -458,9 +486,8 @@ export default function Home() {
               <div className="text-3xl mb-3">✨</div>
               <p className="text-xl font-bold text-sparkle-pink mb-3">ご安心ください！</p>
               <p className="text-base text-gray-700 leading-relaxed">
-                スパークルなら<br className="sm:hidden" />
-                <span className="font-bold text-green-600">「安心」</span>・<span className="font-bold text-blue-600">「楽しい」</span><br className="sm:hidden" />
-                クラT作りをお約束します！
+                CRATee'sなら<br className="sm:hidden" />
+                <span className="font-bold text-green-600">「安心」</span>・<span className="font-bold text-blue-600">「楽しい」</span><br className="sm:hidden" />クラT作りをお約束します！
               </p>
               <div className="flex justify-center gap-2 mt-4">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">サイズ交換保証</span>
@@ -560,9 +587,9 @@ export default function Home() {
             <div className="text-center mt-10">
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-sm mx-auto">
                 <p className="text-sm text-gray-600 mb-4">まずは気軽にご相談ください</p>
-                <button className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all">
+                <a href="https://line.me/R/ti/p/@895gydcc" className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all block text-center">
                   💬 LINEで無料相談する
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -583,10 +610,17 @@ export default function Home() {
                   <div className="text-6xl mb-4">{method.icon}</div>
                   <h3 className="text-2xl font-bold">{method.title}</h3>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-600 mb-4">{method.description}</p>
-                  <p className="text-2xl font-bold text-gray-800">{method.price}</p>
-                </div>
+                {method.title === "刺繍" ? (
+                  <Link href="/estimate" className="block p-6 hover:bg-gray-50 transition cursor-pointer">
+                    <p className="text-gray-600 mb-4">{method.description}</p>
+                    <p className="text-2xl font-bold text-gray-800">{method.price}</p>
+                  </Link>
+                ) : (
+                  <div className="p-6">
+                    <p className="text-gray-600 mb-4">{method.description}</p>
+                    <p className="text-2xl font-bold text-gray-800">{method.price}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -603,34 +637,24 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4">ご注文について</h3>
               <ul className="space-y-2">
-                <Link href="#" className="block hover:text-sparkle-pink transition">注文用紙</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">安払い方法</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">配送事項</Link>
+                <Link href="/returns" className="block hover:text-sparkle-pink transition">返品・交換に関する特約</Link>
+                <Link href="/shipping" className="block hover:text-sparkle-pink transition">配送事項</Link>
               </ul>
             </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">プリントについて</h3>
-              <ul className="space-y-2">
-                <Link href="#" className="block hover:text-sparkle-pink transition">商品</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">デザインサンプル</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">全般の詳細</Link>
-              </ul>
-            </div>
+
             <div>
               <h3 className="text-xl font-bold mb-4">加工方法について</h3>
               <ul className="space-y-2">
-                <Link href="#" className="block hover:text-sparkle-pink transition">お見積もり診断</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">加工方法</Link>
+                <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">スパークルについて</h3>
+              <h3 className="text-xl font-bold mb-4">CRATee'sについて</h3>
               <ul className="space-y-2">
-                <Link href="#" className="block hover:text-sparkle-pink transition">会社概要</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">ご挨拶</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">採用情報</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">プライバシーポリシー</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">ブログ / コラム</Link>
+                <Link href="/company" className="block hover:text-sparkle-pink transition">会社概要</Link>
+                <Link href="/legal" className="block hover:text-sparkle-pink transition">特定商取引に基づく表記</Link>
+                <Link href="/privacy" className="block hover:text-sparkle-pink transition">プライバシーポリシー</Link>
               </ul>
             </div>
           </div>
@@ -641,12 +665,22 @@ export default function Home() {
                 <div className="flex justify-center items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Phone className="w-3 h-3" />
-                    <span>070-9362-9828（24時間受付）</span>
+                    <span>070-9362-9828</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-3 h-3" />
-                    <span>info@s-parkle.co.jp</span>
+                    <span>contact@la-muse.org</span>
                   </div>
+                </div>
+                <div className="flex justify-center items-center gap-4 mt-4">
+                  <Link href="https://www.instagram.com/cla_tees?igsh=MTNtdWJ4bm5nYWRmbg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
+                    <Instagram className="w-5 h-5" />
+                  </Link>
+                  <Link href="https://www.tiktok.com/@clatees?_t=ZS-8zO4FkW6JrM&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>
