@@ -103,7 +103,7 @@ export default function EstimatePage() {
 
                   {/* Primary CTA Button */}
                   <Link
-                    href="https://line.me/R/ti/p/@895gydcc"
+                    href="https://lin.ee/FtxOG2s"
                     className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -367,7 +367,7 @@ export default function EstimatePage() {
                     type="submit"
                     className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all"
                   >
-                    お見積もりを依頼する
+                    メールでお見積もりを依頼する
                   </button>
                   <Link
                      href="https://line.me/R/ti/p/@895gydcc"
@@ -395,7 +395,6 @@ export default function EstimatePage() {
                 <h3 className="text-xl font-bold mb-4">ご注文について</h3>
                 <ul className="space-y-2">
                   <Link href="#" className="block hover:text-sparkle-pink transition">注文用紙</Link>
-                  <Link href="#" className="block hover:text-sparkle-pink transition">安払い方法</Link>
                   <Link href="/shipping" className="block hover:text-sparkle-pink transition">配送事項</Link>
                 </ul>
               </div>

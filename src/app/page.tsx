@@ -106,7 +106,7 @@ export default function Home() {
 
                 {/* Primary CTA Button */}
                 <Link
-                  href="https://line.me/R/ti/p/@895gydcc"
+                  href="https://lin.ee/FtxOG2s"
                   className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -226,29 +226,11 @@ export default function Home() {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="relative">
-              {slide.title === "先生だ ろろろT！" ? (
-                <Link href="/products?category=teacher" className="block w-full h-full">
-                  <img
-                    alt={slide.title}
-                    src={slide.image}
-                    className="object-cover rounded-2xl border border-red-500 w-full h-full cursor-pointer hover:opacity-90 transition-opacity"
-                  />
-                </Link>
-              ) : slide.title === "オリジナル 部活Tシャツ制作" ? (
-                <Link href="/products?category=club" className="block w-full h-full">
-                  <img
-                    alt={slide.title}
-                    src={slide.image}
-                    className="object-cover rounded-2xl border border-red-500 w-full h-full cursor-pointer hover:opacity-90 transition-opacity"
-                  />
-                </Link>
-              ) : (
-                <img
-                  alt={slide.title}
-                  src={slide.image}
-                  className="object-cover rounded-2xl border border-red-500 w-full h-full"
-                />
-              )}
+              <img
+                alt={slide.title}
+                src={slide.image}
+                className="object-cover rounded-2xl border border-red-500 w-full h-full"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -257,7 +239,7 @@ export default function Home() {
       {/* Images Section */}
       <section className="w-full px-4 sm:px-0">
         <div className="w-full">
-          <a href="https://line.me/R/ti/p/@895gydcc" className="block">
+          <a href="https://lin.ee/FtxOG2s" className="block">
               <img
                 src="/クラT画像/LINEPOP2.JPEG"
                 alt="LINEでデザイン ずーっと無料"
@@ -285,7 +267,7 @@ export default function Home() {
             <div className="flex flex-row justify-center gap-4 sm:gap-8 mb-4">
               <div className="bg-white/90 backdrop-blur rounded-full w-20 h-20 sm:w-28 sm:h-28 text-gray-800 shadow-lg flex flex-col items-center justify-center aspect-square">
                 <span className="text-lg sm:text-xl mb-1">🎨</span>
-                <span className="font-bold text-sm text-center leading-tight px-1">
+                <span className="font-bold text-base text-center leading-tight px-1">
                   デザイン＆<br />見積無料
                 </span>
               </div>
@@ -587,7 +569,7 @@ export default function Home() {
             <div className="text-center mt-10">
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-sm mx-auto">
                 <p className="text-sm text-gray-600 mb-4">まずは気軽にご相談ください</p>
-                <a href="https://line.me/R/ti/p/@895gydcc" className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all block text-center">
+                <a href="https://lin.ee/FtxOG2s" className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all block text-center">
                   💬 LINEで無料相談する
                 </a>
               </div>

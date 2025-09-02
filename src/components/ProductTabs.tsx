@@ -181,29 +181,30 @@ export const ProductTabs: React.FC = () => {
             <Swiper
               className="product-swiper"
               modules={[Autoplay, Navigation]}
-              spaceBetween={20}
+              spaceBetween={30}
               slidesPerView={1}
               centeredSlides={false}
               loop={true}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               navigation={true}
               breakpoints={{
-                640: { slidesPerView: 2 },
-                768: { slidesPerView: 3 },
+                640: { slidesPerView: 2, spaceBetween: 25 },
+                768: { slidesPerView: 2.5, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 35 },
               }}
             >
               {productCategories[activeTab].products.map((product) => (
                 <SwiperSlide key={product.id}>
                   <div
                     key={product.id}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group w-full max-w-3xl mx-auto"
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group w-full max-w-7xl mx-auto"
                   >
-                    <div className="relative h-48 bg-gray-50 overflow-hidden rounded-t-3xl">
+                    <div className="relative h-64 bg-gray-50 overflow-hidden rounded-t-3xl">
                       <Image
                         src={product.image || "/api/placeholder/400/400"}
                         alt={product.name}
                         fill
-                        className="object-contain"
+                        className="object-cover hover:scale-105 transition-transform duration-300"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       {product.isNew && (

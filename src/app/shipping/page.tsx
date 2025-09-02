@@ -40,7 +40,7 @@ export default function Shipping() {
 
                   {/* Primary CTA Button */}
                   <a
-                    href="https://line.me/R/ti/p/@895gydcc"
+                    href="https://lin.ee/FtxOG2s"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition flex items-center gap-2"

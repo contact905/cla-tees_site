@@ -377,7 +377,7 @@ export const PriceCalculator: React.FC = () => {
                 <Link href="/estimate" className="block w-full bg-sparkle-pink text-white py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition text-center">
                   正式な見積もりを依頼
                 </Link>
-                <a href="https://line.me/R/ti/p/@895gydcc" target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white py-3 rounded-full font-bold hover:bg-green-600 transition text-center">
+                <a href="https://lin.ee/FtxOG2s" target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white py-3 rounded-full font-bold hover:bg-green-600 transition text-center">
                   LINEで相談する
                 </a>
               </div>

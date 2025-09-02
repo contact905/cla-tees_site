@@ -47,7 +47,7 @@ export default function ProductDetailPage({ params }: PageProps) {
                 <Image src="/logo.png" alt="SPARKLE" width={120} height={48} className="h-10 w-auto" />
               </Link>
               <Link
-                href="https://line.me/R/ti/p/@895gydcc"
+                href="https://lin.ee/FtxOG2s"
                 className="ml-2 bg-green-500 text-white px-3 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1.5 shrink-0"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -200,7 +200,7 @@ export default function ProductDetailPage({ params }: PageProps) {
                 </Link>
               </div>
 
-              <a href="https://line.me/R/ti/p/@895gydcc" target="_blank" rel="noopener noreferrer" className="block w-fit ml-auto mt-4">
+              <a href="https://lin.ee/FtxOG2s" target="_blank" rel="noopener noreferrer" className="block w-fit ml-auto mt-4">
                 <Image
                   src="/クラT画像/LINEPOP1.png"
                   alt="LINE POP Illustration"

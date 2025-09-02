@@ -81,7 +81,7 @@ export default function Products() {
                 {/* LINE Button & Menu Toggle */}
                 <div className="flex items-center space-x-2">
                   <a
-                    href="https://line.me/R/ti/p/@895gydcc"
+                    href="https://lin.ee/FtxOG2s"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"

@@ -70,7 +70,7 @@ export default function GuidePage() {
               面倒な会員登録不要。LINEだけで注文が完結します。
             </p>
             <Link
-              href="https://line.me/R/ti/p/@895gydcc"
+              href="https://lin.ee/FtxOG2s"
               className="inline-flex items-center gap-2 bg-white text-green-600 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-gray-100 transition"
             >
               <MessageCircle className="w-4 h-4 sm:w-6 sm:h-6" />
