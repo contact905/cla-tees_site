@@ -106,7 +106,7 @@ export default function Home() {
 
                 {/* Primary CTA Button */}
                 <Link
-                  href="https://lin.ee/FtxOG2s"
+                  href="https://line.me/R/ti/p/@895gydcc"
                   className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -239,7 +239,7 @@ export default function Home() {
       {/* Images Section */}
       <section className="w-full px-4 sm:px-0">
         <div className="w-full">
-          <a href="https://lin.ee/FtxOG2s" className="block">
+          <a href="https://line.me/R/ti/p/@895gydcc" className="block">
               <img
                 src="/クラT画像/LINEPOP2.JPEG"
                 alt="LINEでデザイン ずーっと無料"
@@ -569,7 +569,7 @@ export default function Home() {
             <div className="text-center mt-10">
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-sm mx-auto">
                 <p className="text-sm text-gray-600 mb-4">まずは気軽にご相談ください</p>
-                <a href="https://lin.ee/FtxOG2s" className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all block text-center">
+                <a href="https://line.me/R/ti/p/@895gydcc" className="w-full bg-gradient-to-r from-sparkle-pink to-sparkle-pink-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all block text-center">
                   💬 LINEで無料相談する
                 </a>
               </div>

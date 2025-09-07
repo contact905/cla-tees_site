@@ -21,29 +21,89 @@ export default function Products() {
 
   const categories = [
     { id: "all", name: "すべて" },
-    { id: "soccer", name: "サッカーユニ" },
-    { id: "basketball", name: "バスケユニ" },
+    { id: "soccer", name: "サッカーTシャツ" },
+    { id: "basketball", name: "バスケTシャツ" },
+    { id: "baseball", name: "野球Tシャツ" },
     { id: "classt", name: "クラスT" },
   ];
 
   const products = [
     // サッカーユニ（ProductTabsと同期）
-    { id: "3-3", name: "レッドサッカーユニフォーム", price: "¥2,200〜", image: "/クラT画像/サッカー2.png", sizes: "S-XL", category: "soccer" },
-    { id: "3-4", name: "ホワイトサッカーユニフォーム", price: "¥2,200〜", image: "/クラT画像/サッカー3.png", sizes: "S-XL", category: "soccer" },
-    { id: "3-5", name: "ブルーサッカーユニフォーム", price: "¥2,200〜", image: "/クラT画像/サッカー4.png", sizes: "S-XL", category: "soccer" },
-    { id: "3-6", name: "QUESTサッカーユニフォーム", price: "¥2,200〜", image: "/クラT画像/サッカー5.png", sizes: "S-XL", category: "soccer" },
-    { id: "3-7", name: "Spot サッカーユニフォーム", price: "¥2,200〜", image: "/クラT画像/サッカー7.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-1", name: "サッカーユニフォーム1", price: "¥1,600〜", image: "/クラT画像/サッカー1.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-2", name: "サッカーユニフォーム2", price: "¥1,600〜", image: "/クラT画像/サッカー2.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-3", name: "サッカーユニフォーム3", price: "¥1,600〜", image: "/クラT画像/サッカー3.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-4", name: "サッカーユニフォーム4", price: "¥1,600〜", image: "/クラT画像/サッカー4.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-5", name: "サッカーユニフォーム5", price: "¥1,600〜", image: "/クラT画像/サッカー5.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-6", name: "サッカーユニフォーム6", price: "¥1,600〜", image: "/クラT画像/サッカー6.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-7", name: "サッカーユニフォーム7", price: "¥1,600〜", image: "/クラT画像/サッカー7.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-8", name: "サッカーユニフォーム8", price: "¥1,600〜", image: "/クラT画像/サッカー8.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-9", name: "サッカーユニフォーム9", price: "¥1,600〜", image: "/クラT画像/サッカー9.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-10", name: "サッカーユニフォーム10", price: "¥1,600〜", image: "/クラT画像/サッカー10.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-11", name: "サッカーユニフォーム11", price: "¥1,600〜", image: "/クラT画像/サッカー11.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-12", name: "サッカーユニフォーム12", price: "¥1,600〜", image: "/クラT画像/サッカー12.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-13", name: "サッカーユニフォーム13", price: "¥1,600〜", image: "/クラT画像/サッカー13.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-14", name: "サッカーユニフォーム14", price: "¥1,600〜", image: "/クラT画像/サッカー14.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-15", name: "サッカーユニフォーム15", price: "¥1,600〜", image: "/クラT画像/サッカー15.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-16", name: "サッカーユニフォーム16", price: "¥1,600〜", image: "/クラT画像/サッカー16.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-17", name: "サッカーユニフォーム17", price: "¥1,600〜", image: "/クラT画像/サッカー17.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-18", name: "サッカーユニフォーム18", price: "¥1,600〜", image: "/クラT画像/サッカー18.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-19", name: "サッカーユニフォーム19", price: "¥1,600〜", image: "/クラT画像/サッカー19.png", sizes: "S-XL", category: "soccer" },
+    { id: "soccer-20", name: "サッカーユニフォーム20", price: "¥1,600〜", image: "/クラT画像/サッカー20.png", sizes: "S-XL", category: "soccer" },
     
     // バスケユニ（ProductTabsと同期）
-    { id: "4", name: "バスケットユニフォーム", price: "¥1,300〜", image: "https://ext.same-assets.com/1649376393/467570851.png", sizes: "S-XL", category: "basketball" },
-    { id: "4-3", name: "バスケタンクトップユニフォーム", price: "¥1,300〜", image: "/クラT画像/バスケタンクトップユニ.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-1", name: "バスケユニフォーム1", price: "¥1,600〜", image: "/クラT画像/バスケ1.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-2", name: "バスケユニフォーム2", price: "¥1,600〜", image: "/クラT画像/バスケ2.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-3", name: "バスケユニフォーム3", price: "¥1,600〜", image: "/クラT画像/バスケ3.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-4", name: "バスケユニフォーム4", price: "¥1,600〜", image: "/クラT画像/バスケ4.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-5", name: "バスケユニフォーム5", price: "¥1,600〜", image: "/クラT画像/バスケ5.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-6", name: "バスケユニフォーム6", price: "¥1,600〜", image: "/クラT画像/バスケ6.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-7", name: "バスケユニフォーム7", price: "¥1,600〜", image: "/クラT画像/バスケ7.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-8", name: "バスケユニフォーム8", price: "¥1,600〜", image: "/クラT画像/バスケ8.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-9", name: "バスケユニフォーム9", price: "¥1,600〜", image: "/クラT画像/バスケ9.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-10", name: "バスケユニフォーム10", price: "¥1,600〜", image: "/クラT画像/バスケ10.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-11", name: "バスケユニフォーム11", price: "¥1,600〜", image: "/クラT画像/バスケ11.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-12", name: "バスケユニフォーム12", price: "¥1,600〜", image: "/クラT画像/バスケ12.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-13", name: "バスケユニフォーム13", price: "¥1,600〜", image: "/クラT画像/バスケ13.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-14", name: "バスケユニフォーム14", price: "¥1,600〜", image: "/クラT画像/バスケ14.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-15", name: "バスケユニフォーム15", price: "¥1,600〜", image: "/クラT画像/バスケ15.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-16", name: "バスケユニフォーム16", price: "¥1,600〜", image: "/クラT画像/バスケ16.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-17", name: "バスケユニフォーム17", price: "¥1,600〜", image: "/クラT画像/バスケ17.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-18", name: "バスケユニフォーム18", price: "¥1,600〜", image: "/クラT画像/バスケ18.png", sizes: "S-XL", category: "basketball" },
+    { id: "basketball-19", name: "バスケユニフォーム19", price: "¥1,600〜", image: "/クラT画像/バスケ19.png", sizes: "S-XL", category: "basketball" },
+    
+    // 野球ユニ（ProductTabsと同期）
+    { id: "baseball-1", name: "野球ユニフォーム1", price: "¥1,600〜", image: "/クラT画像/野球1.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-2", name: "野球ユニフォーム2", price: "¥1,600〜", image: "/クラT画像/野球2.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-3", name: "野球ユニフォーム3", price: "¥1,600〜", image: "/クラT画像/野球3.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-4", name: "野球ユニフォーム4", price: "¥1,600〜", image: "/クラT画像/野球4.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-5", name: "野球ユニフォーム5", price: "¥1,600〜", image: "/クラT画像/野球5.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-6", name: "野球ユニフォーム6", price: "¥1,600〜", image: "/クラT画像/野球6.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-7", name: "野球ユニフォーム7", price: "¥1,600〜", image: "/クラT画像/野球7.png", sizes: "S-XL", category: "baseball" },
+    { id: "baseball-8", name: "野球ユニフォーム8", price: "¥1,600〜", image: "/クラT画像/野球8.png", sizes: "S-XL", category: "baseball" },
     
     // クラスT（ProductTabsと同期）
-    { id: "5", name: "ポリエステルT", price: "¥1,500〜", image: "/クラT画像/ポリエステルT.png", sizes: "XS-5XL", category: "classt" },
-    { id: "6", name: "コットンT", price: "¥1,500〜", image: "/クラT画像/コットンT.png", sizes: "XS-5XL", category: "classt" },
-    { id: "8", name: "ポロシャツ", price: "¥2,200〜", image: "/クラT画像/ポロシャツ.png", sizes: "XS-5XL", category: "classt" },
+    { id: "classt-1", name: "クラスT1", price: "¥1,300〜", image: "/クラT画像/クラスT1.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-2", name: "クラスT2", price: "¥1,300〜", image: "/クラT画像/クラスT2.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-3", name: "クラスT3", price: "¥1,300〜", image: "/クラT画像/クラスT3.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-4", name: "クラスT4", price: "¥1,300〜", image: "/クラT画像/クラスT4.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-5", name: "クラスT5", price: "¥1,300〜", image: "/クラT画像/クラスT5.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-6", name: "クラスT6", price: "¥1,300〜", image: "/クラT画像/クラスT6.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-7", name: "クラスT7", price: "¥1,300〜", image: "/クラT画像/クラスT7.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-8", name: "クラスT8", price: "¥1,300〜", image: "/クラT画像/クラスT8.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-9", name: "クラスT9", price: "¥1,300〜", image: "/クラT画像/クラスT9.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-10", name: "クラスT10", price: "¥1,300〜", image: "/クラT画像/クラスT10.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-11", name: "クラスT11", price: "¥1,300〜", image: "/クラT画像/クラスT11.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-12", name: "クラスT12", price: "¥1,300〜", image: "/クラT画像/クラスT12.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-13", name: "クラスT13", price: "¥1,300〜", image: "/クラT画像/クラスT13.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-14", name: "クラスT14", price: "¥1,300〜", image: "/クラT画像/クラスT14.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-15", name: "クラスT15", price: "¥1,300〜", image: "/クラT画像/クラスT15.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-16", name: "クラスT16", price: "¥1,300〜", image: "/クラT画像/クラスT16.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-17", name: "クラスT17", price: "¥1,300〜", image: "/クラT画像/クラスT17.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-18", name: "クラスT18", price: "¥1,300〜", image: "/クラT画像/クラスT18.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-19", name: "クラスT19", price: "¥1,300〜", image: "/クラT画像/クラスT19.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-20", name: "クラスT20", price: "¥1,300〜", image: "/クラT画像/クラスT20.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-21", name: "クラスT21", price: "¥1,300〜", image: "/クラT画像/クラスT21.png", sizes: "S-XL", category: "classt" },
 
-    { id: "10", name: "ヘビーウェイトTシャツ", price: "¥1,500〜", image: "/クラT画像/ヘビーウェイトT.png", sizes: "XS-5XL", category: "classt" },
   ];
 
   const filteredProducts = activeCategory === "all" 
@@ -81,7 +141,7 @@ export default function Products() {
                 {/* LINE Button & Menu Toggle */}
                 <div className="flex items-center space-x-2">
                   <a
-                    href="https://lin.ee/FtxOG2s"
+                    href="https://line.me/R/ti/p/@895gydcc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"

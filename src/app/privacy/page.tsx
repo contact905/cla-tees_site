@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Instagram } from "lucide-react";
 import { WavePatternTop, WavePatternBottom } from "@/components/WavePattern";
 
 export default function Privacy() {
@@ -210,33 +210,22 @@ export default function Privacy() {
       <WavePatternBottom />
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="px-4">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Image
-                src="/logo.png"
-                alt="CRATee's Logo"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="text-xl font-bold">CRATee's</span>
-            </div>
-            <p className="text-gray-400 text-sm">
-              オリジナルTシャツ・クラスTシャツの制作なら
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">サービス</h3>
+              <h3 className="text-xl font-bold mb-4">ご注文について</h3>
               <ul className="space-y-2">
-                <Link href="/products" className="block hover:text-sparkle-pink transition">商品一覧</Link>
-                <Link href="/guide" className="block hover:text-sparkle-pink transition">ご利用ガイド</Link>
-                <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もり</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">デザイン相談</Link>
-                <Link href="#" className="block hover:text-sparkle-pink transition">加工方法</Link>
+                <Link href="/returns" className="block hover:text-sparkle-pink transition">返品・交換に関する特約</Link>
+                <Link href="/shipping" className="block hover:text-sparkle-pink transition">配送事項</Link>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4">加工方法について</h3>
+              <ul className="space-y-2">
+                <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+
               </ul>
             </div>
             <div>
@@ -262,13 +251,26 @@ export default function Privacy() {
                     <span>contact@la-muse.org</span>
                   </div>
                 </div>
+                <div className="flex justify-center items-center gap-4 mt-4">
+                  <Link href="https://www.instagram.com/cla_tees?igsh=MTNtdWJ4bm5nYWRmbg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
+                    <Instagram className="w-5 h-5" />
+                  </Link>
+                  <Link href="https://www.tiktok.com/@clatees?_t=ZS-8zO4FkW6JrM&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="text-center pt-8 border-t border-gray-700">
-            <p className="text-xs text-gray-400">
-              © 2024 CRATee's. All rights reserved.
+          <div className="text-center mt-8 pt-8 border-t border-gray-700">
+            <p className="text-sm">
+              © ORIGINAL PRINTING S PARKLE
+            </p>
+            <p className="text-xs mt-2">
+              思い出作りを全力でサポート致します。
             </p>
           </div>
         </div>

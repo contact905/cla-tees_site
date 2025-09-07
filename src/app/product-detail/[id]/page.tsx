@@ -20,27 +20,86 @@ export default function ProductDetail() {
   // ProductTabsと同期した商品データ
   const productCategories = {
     soccer: [
-      { id: "3-3", name: "レッドサッカーユニフォーム", price: 2200, image: "/クラT画像/サッカー2.png", sizes: ["S", "M", "L", "XL"], colors: ["レッド", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "3-4", name: "ホワイトサッカーユニフォーム", price: 2200, image: "/クラT画像/サッカー3.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブルー"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "3-5", name: "ブルーサッカーユニフォーム", price: 2200, image: "/クラT画像/サッカー4.png", sizes: ["S", "M", "L", "XL"], colors: ["ブルー", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "3-6", name: "QUESTサッカーユニフォーム", price: 2200, image: "/クラT画像/サッカー5.png", sizes: ["S", "M", "L", "XL"], colors: ["ブルー", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "3-7", name: "Spot サッカーユニフォーム", price: 2200, image: "/クラT画像/サッカー7.png", sizes: ["S", "M", "L", "XL"], colors: ["ブラック", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-1", name: "サッカーユニフォーム1", price: 1600, image: "/クラT画像/サッカー1.png", sizes: ["S", "M", "L", "XL"], colors: ["ブルー", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-2", name: "サッカーユニフォーム2", price: 1600, image: "/クラT画像/サッカー2.png", sizes: ["S", "M", "L", "XL"], colors: ["レッド", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-3", name: "サッカーユニフォーム3", price: 1600, image: "/クラT画像/サッカー3.png", sizes: ["S", "M", "L", "XL"], colors: ["グリーン", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-4", name: "サッカーユニフォーム4", price: 1600, image: "/クラT画像/サッカー4.png", sizes: ["S", "M", "L", "XL"], colors: ["イエロー", "ブラック"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-5", name: "サッカーユニフォーム5", price: 1600, image: "/クラT画像/サッカー5.png", sizes: ["S", "M", "L", "XL"], colors: ["パープル", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-6", name: "サッカーユニフォーム6", price: 1600, image: "/クラT画像/サッカー6.png", sizes: ["S", "M", "L", "XL"], colors: ["オレンジ", "ブラック"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-7", name: "サッカーユニフォーム7", price: 1600, image: "/クラT画像/サッカー7.png", sizes: ["S", "M", "L", "XL"], colors: ["ブラック", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-8", name: "サッカーユニフォーム8", price: 1600, image: "/クラT画像/サッカー8.png", sizes: ["S", "M", "L", "XL"], colors: ["ネイビー", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-9", name: "サッカーユニフォーム9", price: 1600, image: "/クラT画像/サッカー9.png", sizes: ["S", "M", "L", "XL"], colors: ["ピンク", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-10", name: "サッカーユニフォーム10", price: 1600, image: "/クラT画像/サッカー10.png", sizes: ["S", "M", "L", "XL"], colors: ["ライトブルー", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-11", name: "サッカーユニフォーム11", price: 1600, image: "/クラT画像/サッカー11.png", sizes: ["S", "M", "L", "XL"], colors: ["マルーン", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-12", name: "サッカーユニフォーム12", price: 1600, image: "/クラT画像/サッカー12.png", sizes: ["S", "M", "L", "XL"], colors: ["ターコイズ", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-13", name: "サッカーユニフォーム13", price: 1600, image: "/クラT画像/サッカー13.png", sizes: ["S", "M", "L", "XL"], colors: ["ライム", "ブラック"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-14", name: "サッカーユニフォーム14", price: 1600, image: "/クラT画像/サッカー14.png", sizes: ["S", "M", "L", "XL"], colors: ["ゴールド", "ブラック"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-15", name: "サッカーユニフォーム15", price: 1600, image: "/クラT画像/サッカー15.png", sizes: ["S", "M", "L", "XL"], colors: ["シルバー", "ブラック"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-16", name: "サッカーユニフォーム16", price: 1600, image: "/クラT画像/サッカー16.png", sizes: ["S", "M", "L", "XL"], colors: ["ブラウン", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-17", name: "サッカーユニフォーム17", price: 1600, image: "/クラT画像/サッカー17.png", sizes: ["S", "M", "L", "XL"], colors: ["インディゴ", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-18", name: "サッカーユニフォーム18", price: 1600, image: "/クラT画像/サッカー18.png", sizes: ["S", "M", "L", "XL"], colors: ["クリムゾン", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-19", name: "サッカーユニフォーム19", price: 1600, image: "/クラT画像/サッカー19.png", sizes: ["S", "M", "L", "XL"], colors: ["フォレストグリーン", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "soccer-20", name: "サッカーユニフォーム20", price: 1600, image: "/クラT画像/サッカー20.png", sizes: ["S", "M", "L", "XL"], colors: ["ロイヤルブルー", "ホワイト"], description: "高品質なサッカーユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
     ],
     basketball: [
-      { id: "4", name: "バスケットユニフォーム", price: 1300, image: "https://ext.same-assets.com/1649376393/467570851.png", sizes: ["S", "M", "L", "XL"], colors: ["ブルー", "ホワイト"], description: "高品質なバスケットボールユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "4-3", name: "バスケタンクトップユニフォーム", price: 1300, image: "/クラT画像/バスケタンクトップユニ.png", sizes: ["S", "M", "L", "XL"], colors: ["レッド", "ホワイト"], description: "高品質なバスケットボールユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false }
+      { id: "basketball-1", name: "バスケユニフォーム1", price: 1600, image: "/クラT画像/バスケ1.png", sizes: ["S", "M", "L", "XL"], colors: ["ブルー", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-2", name: "バスケユニフォーム2", price: 1600, image: "/クラT画像/バスケ2.png", sizes: ["S", "M", "L", "XL"], colors: ["レッド", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-3", name: "バスケユニフォーム3", price: 1600, image: "/クラT画像/バスケ3.png", sizes: ["S", "M", "L", "XL"], colors: ["グリーン", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-4", name: "バスケユニフォーム4", price: 1600, image: "/クラT画像/バスケ4.png", sizes: ["S", "M", "L", "XL"], colors: ["イエロー", "ブラック"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-5", name: "バスケユニフォーム5", price: 1600, image: "/クラT画像/バスケ5.png", sizes: ["S", "M", "L", "XL"], colors: ["パープル", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-6", name: "バスケユニフォーム6", price: 1600, image: "/クラT画像/バスケ6.png", sizes: ["S", "M", "L", "XL"], colors: ["オレンジ", "ブラック"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-7", name: "バスケユニフォーム7", price: 1600, image: "/クラT画像/バスケ7.png", sizes: ["S", "M", "L", "XL"], colors: ["ブラック", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-8", name: "バスケユニフォーム8", price: 1600, image: "/クラT画像/バスケ8.png", sizes: ["S", "M", "L", "XL"], colors: ["ネイビー", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-9", name: "バスケユニフォーム9", price: 1600, image: "/クラT画像/バスケ9.png", sizes: ["S", "M", "L", "XL"], colors: ["ピンク", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-10", name: "バスケユニフォーム10", price: 1600, image: "/クラT画像/バスケ10.png", sizes: ["S", "M", "L", "XL"], colors: ["ライトブルー", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-11", name: "バスケユニフォーム11", price: 1600, image: "/クラT画像/バスケ11.png", sizes: ["S", "M", "L", "XL"], colors: ["マルーン", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-12", name: "バスケユニフォーム12", price: 1600, image: "/クラT画像/バスケ12.png", sizes: ["S", "M", "L", "XL"], colors: ["ターコイズ", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-13", name: "バスケユニフォーム13", price: 1600, image: "/クラT画像/バスケ13.png", sizes: ["S", "M", "L", "XL"], colors: ["ライム", "ブラック"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-14", name: "バスケユニフォーム14", price: 1600, image: "/クラT画像/バスケ14.png", sizes: ["S", "M", "L", "XL"], colors: ["ゴールド", "ブラック"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-15", name: "バスケユニフォーム15", price: 1600, image: "/クラT画像/バスケ15.png", sizes: ["S", "M", "L", "XL"], colors: ["シルバー", "ブラック"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-16", name: "バスケユニフォーム16", price: 1600, image: "/クラT画像/バスケ16.png", sizes: ["S", "M", "L", "XL"], colors: ["ブラウン", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-17", name: "バスケユニフォーム17", price: 1600, image: "/クラT画像/バスケ17.png", sizes: ["S", "M", "L", "XL"], colors: ["インディゴ", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-18", name: "バスケユニフォーム18", price: 1600, image: "/クラT画像/バスケ18.png", sizes: ["S", "M", "L", "XL"], colors: ["クリムゾン", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "basketball-19", name: "バスケユニフォーム19", price: 1600, image: "/クラT画像/バスケ19.png", sizes: ["S", "M", "L", "XL"], colors: ["フォレストグリーン", "ホワイト"], description: "高品質なバスケユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+    ],
+    baseball: [
+      { id: "baseball-1", name: "野球ユニフォーム1", price: 1600, image: "/クラT画像/野球1.png", sizes: ["S", "M", "L", "XL"], colors: ["ブルー", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-2", name: "野球ユニフォーム2", price: 1600, image: "/クラT画像/野球2.png", sizes: ["S", "M", "L", "XL"], colors: ["レッド", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-3", name: "野球ユニフォーム3", price: 1600, image: "/クラT画像/野球3.png", sizes: ["S", "M", "L", "XL"], colors: ["グリーン", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-4", name: "野球ユニフォーム4", price: 1600, image: "/クラT画像/野球4.png", sizes: ["S", "M", "L", "XL"], colors: ["イエロー", "ブラック"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-5", name: "野球ユニフォーム5", price: 1600, image: "/クラT画像/野球5.png", sizes: ["S", "M", "L", "XL"], colors: ["パープル", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-6", name: "野球ユニフォーム6", price: 1600, image: "/クラT画像/野球6.png", sizes: ["S", "M", "L", "XL"], colors: ["オレンジ", "ブラック"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-7", name: "野球ユニフォーム7", price: 1600, image: "/クラT画像/野球7.png", sizes: ["S", "M", "L", "XL"], colors: ["ブラック", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "baseball-8", name: "野球ユニフォーム8", price: 1600, image: "/クラT画像/野球8.png", sizes: ["S", "M", "L", "XL"], colors: ["ネイビー", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
     ],
     classt: [
-      { id: "5", name: "ポリエステルT", price: 1500, image: "/クラT画像/ポリエステルT.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "吸汗速乾性に優れたポリエステルTシャツ", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "6", name: "コットンT", price: 1500, image: "/クラT画像/コットンT.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "肌触りの良いコットンTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "8", name: "ポロシャツ", price: 1500, image: "/クラT画像/ポロシャツ.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "上品なポロシャツ", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-1", name: "クラスT1", price: 1300, image: "/クラT画像/クラスT1.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-2", name: "クラスT2", price: 1300, image: "/クラT画像/クラスT2.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-3", name: "クラスT3", price: 1300, image: "/クラT画像/クラスT3.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-4", name: "クラスT4", price: 1300, image: "/クラT画像/クラスT4.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-5", name: "クラスT5", price: 1300, image: "/クラT画像/クラスT5.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-6", name: "クラスT6", price: 1300, image: "/クラT画像/クラスT6.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-7", name: "クラスT7", price: 1300, image: "/クラT画像/クラスT7.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-8", name: "クラスT8", price: 1300, image: "/クラT画像/クラスT8.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-9", name: "クラスT9", price: 1300, image: "/クラT画像/クラスT9.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-10", name: "クラスT10", price: 1300, image: "/クラT画像/クラスT10.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-11", name: "クラスT11", price: 1300, image: "/クラT画像/クラスT11.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-12", name: "クラスT12", price: 1300, image: "/クラT画像/クラスT12.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-13", name: "クラスT13", price: 1300, image: "/クラT画像/クラスT13.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-14", name: "クラスT14", price: 1300, image: "/クラT画像/クラスT14.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-15", name: "クラスT15", price: 1300, image: "/クラT画像/クラスT15.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-16", name: "クラスT16", price: 1300, image: "/クラT画像/クラスT16.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-17", name: "クラスT17", price: 1300, image: "/クラT画像/クラスT17.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-18", name: "クラスT18", price: 1300, image: "/クラT画像/クラスT18.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-19", name: "クラスT19", price: 1300, image: "/クラT画像/クラスT19.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-20", name: "クラスT20", price: 1300, image: "/クラT画像/クラスT20.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-21", name: "クラスT21", price: 1300, image: "/クラT画像/クラスT21.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+    ],
 
-      { id: "10", name: "ヘビーウェイトTシャツ", price: 1500, image: "/クラT画像/ヘビーウェイトT.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "厚手で丈夫なヘビーウェイトTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false }
-    ]
   };
 
   // 全商品を統合
-  const allProducts = [...productCategories.soccer, ...productCategories.basketball, ...productCategories.classt];
+  const allProducts = [...productCategories.soccer, ...productCategories.basketball, ...productCategories.baseball, ...productCategories.classt];
   
   // 現在の商品を取得
   const product = allProducts.find(p => p.id === productId) || {
@@ -57,17 +116,75 @@ export default function ProductDetail() {
   // 商品画像配列（商品に対応する複数の画像）
   const getProductImages = (productId: string): string[] => {
     const imageMap: { [key: string]: string[] } = {
-      "3-3": ["/クラT画像/サッカー2.png"],
-      "3-4": ["/クラT画像/サッカー3.png"],
-      "3-5": ["/クラT画像/サッカー4.png"],
-      "3-6": ["/クラT画像/サッカー5.png"],
-      "3-7": ["/クラT画像/サッカー7.png"],
-      "4": ["https://ext.same-assets.com/1649376393/467570851.png"],
-      "4-3": ["/クラT画像/バスケタンクトップユニ.png"],
-      "5": ["/クラT画像/ポリエステルT.png"],
-      "6": ["/クラT画像/コットンT.png"],
-      "8": ["/クラT画像/ポロシャツ.png"],
-      "10": ["/クラT画像/ヘビーウェイトT.png"]
+      "soccer-1": ["/クラT画像/サッカー1.png"],
+      "soccer-2": ["/クラT画像/サッカー2.png"],
+      "soccer-3": ["/クラT画像/サッカー3.png"],
+      "soccer-4": ["/クラT画像/サッカー4.png"],
+      "soccer-5": ["/クラT画像/サッカー5.png"],
+      "soccer-6": ["/クラT画像/サッカー6.png"],
+      "soccer-7": ["/クラT画像/サッカー7.png"],
+      "soccer-8": ["/クラT画像/サッカー8.png"],
+      "soccer-9": ["/クラT画像/サッカー9.png"],
+      "soccer-10": ["/クラT画像/サッカー10.png"],
+      "soccer-11": ["/クラT画像/サッカー11.png"],
+      "soccer-12": ["/クラT画像/サッカー12.png"],
+      "soccer-13": ["/クラT画像/サッカー13.png"],
+      "soccer-14": ["/クラT画像/サッカー14.png"],
+      "soccer-15": ["/クラT画像/サッカー15.png"],
+      "soccer-16": ["/クラT画像/サッカー16.png"],
+      "soccer-17": ["/クラT画像/サッカー17.png"],
+      "soccer-18": ["/クラT画像/サッカー18.png"],
+      "soccer-19": ["/クラT画像/サッカー19.png"],
+      "soccer-20": ["/クラT画像/サッカー20.png"],
+      "basketball-1": ["/クラT画像/バスケ1.png"],
+      "basketball-2": ["/クラT画像/バスケ2.png"],
+      "basketball-3": ["/クラT画像/バスケ3.png"],
+      "basketball-4": ["/クラT画像/バスケ4.png"],
+      "basketball-5": ["/クラT画像/バスケ5.png"],
+      "basketball-6": ["/クラT画像/バスケ6.png"],
+      "basketball-7": ["/クラT画像/バスケ7.png"],
+      "basketball-8": ["/クラT画像/バスケ8.png"],
+      "basketball-9": ["/クラT画像/バスケ9.png"],
+      "basketball-10": ["/クラT画像/バスケ10.png"],
+      "basketball-11": ["/クラT画像/バスケ11.png"],
+      "basketball-12": ["/クラT画像/バスケ12.png"],
+      "basketball-13": ["/クラT画像/バスケ13.png"],
+      "basketball-14": ["/クラT画像/バスケ14.png"],
+      "basketball-15": ["/クラT画像/バスケ15.png"],
+      "basketball-16": ["/クラT画像/バスケ16.png"],
+      "basketball-17": ["/クラT画像/バスケ17.png"],
+      "basketball-18": ["/クラT画像/バスケ18.png"],
+      "basketball-19": ["/クラT画像/バスケ19.png"],
+      "baseball-1": ["/クラT画像/野球1.png"],
+      "baseball-2": ["/クラT画像/野球2.png"],
+      "baseball-3": ["/クラT画像/野球3.png"],
+      "baseball-4": ["/クラT画像/野球4.png"],
+      "baseball-5": ["/クラT画像/野球5.png"],
+      "baseball-6": ["/クラT画像/野球6.png"],
+      "baseball-7": ["/クラT画像/野球7.png"],
+      "baseball-8": ["/クラT画像/野球8.png"],
+      "classt-1": ["/クラT画像/クラスT1.png"],
+      "classt-2": ["/クラT画像/クラスT2.png"],
+      "classt-3": ["/クラT画像/クラスT3.png"],
+      "classt-4": ["/クラT画像/クラスT4.png"],
+      "classt-5": ["/クラT画像/クラスT5.png"],
+      "classt-6": ["/クラT画像/クラスT6.png"],
+      "classt-7": ["/クラT画像/クラスT7.png"],
+      "classt-8": ["/クラT画像/クラスT8.png"],
+      "classt-9": ["/クラT画像/クラスT9.png"],
+      "classt-10": ["/クラT画像/クラスT10.png"],
+      "classt-11": ["/クラT画像/クラスT11.png"],
+      "classt-12": ["/クラT画像/クラスT12.png"],
+      "classt-13": ["/クラT画像/クラスT13.png"],
+      "classt-14": ["/クラT画像/クラスT14.png"],
+      "classt-15": ["/クラT画像/クラスT15.png"],
+      "classt-16": ["/クラT画像/クラスT16.png"],
+      "classt-17": ["/クラT画像/クラスT17.png"],
+      "classt-18": ["/クラT画像/クラスT18.png"],
+      "classt-19": ["/クラT画像/クラスT19.png"],
+      "classt-20": ["/クラT画像/クラスT20.png"],
+      "classt-21": ["/クラT画像/クラスT21.png"],
+
     };
     return imageMap[productId] || [product.image];
   };
@@ -186,7 +303,7 @@ export default function ProductDetail() {
                 {/* LINE Button & Menu Toggle */}
                 <div className="flex items-center space-x-2">
                   <a
-                    href="https://lin.ee/FtxOG2s"
+                    href="https://line.me/R/ti/p/@895gydcc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
@@ -265,7 +382,7 @@ export default function ProductDetail() {
                     src={selectedImage}
                     alt={product.name}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 )}
               </div>
@@ -367,7 +484,7 @@ export default function ProductDetail() {
                 <div>
                   <label className="block text-sm font-medium mb-2">サイズ</label>
                   <div className="grid grid-cols-3 gap-2">
-                    {product.sizes.map((size) => (
+                    {product.sizes.map((size: string) => (
                       <button
                         key={size}
                         onClick={() => setSelectedSize(size)}

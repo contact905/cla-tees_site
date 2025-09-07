@@ -150,8 +150,9 @@
   transform: scale(1.05);
 }
 
+/* Remove aggressive zoom on product slides to avoid cropping at edges */
 .product-swiper .swiper-slide-active {
-  transform: scale(1.1);
+  transform: none;
 }
 
 .hero-swiper .swiper-slide-prev,
@@ -161,5 +162,5 @@
 
 .product-swiper .swiper-slide-prev,
 .product-swiper .swiper-slide-next {
-  transform: scale(0.9);
+  transform: none;
 }

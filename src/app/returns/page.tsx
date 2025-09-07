@@ -40,7 +40,7 @@ export default function Returns() {
 
                 {/* Primary CTA Button */}
                 <Link
-                  href="https://lin.ee/FtxOG2s"
+                  href="https://line.me/R/ti/p/@895gydcc"
                   className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
