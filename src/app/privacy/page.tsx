@@ -188,7 +188,7 @@ export default function Privacy() {
             </section>
 
             <div className="text-right text-gray-600 mt-8">
-              <p>制定日：2024年1月1日</p>
+              <p>制定日：2025年9月8日</p>
             </div>
 
             {/* Contact CTA */}
