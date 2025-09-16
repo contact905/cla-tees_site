@@ -538,7 +538,7 @@ export default function ProductDetail() {
 
                 {/* 自動見積もりボタン */}
                 <Link
-                  href="/estimate"
+                  href="/products"
                   className="block w-full bg-sparkle-pink text-white py-4 px-6 rounded-full font-bold text-center hover:bg-sparkle-pink-dark transition"
                 >
                   <ShoppingCart className="inline-block mr-2" size={20} />
@@ -627,7 +627,7 @@ export default function ProductDetail() {
               <div>
                 <h3 className="text-xl font-bold mb-4">加工方法について</h3>
                 <ul className="space-y-2">
-                  <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
 
                 </ul>
               </div>
@@ -670,7 +670,7 @@ export default function ProductDetail() {
 
             <div className="text-center mt-8 pt-8 border-t border-gray-700">
               <p className="text-sm">
-                © ORIGINAL PRINTING S PARKLE
+                © 株式会社LaMuse
               </p>
               <p className="text-xs mt-2">
                 思い出作りを全力でサポート致します。

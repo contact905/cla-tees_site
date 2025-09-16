@@ -72,7 +72,7 @@ export default function Legal() {
                     <Link href="/guide" className="block py-2 px-4 rounded-lg hover:bg-sparkle-pink/10 transition">
                       ご利用ガイド
                     </Link>
-                    <Link href="/estimate" className="block py-2 px-4 rounded-lg hover:bg-sparkle-pink/10 transition">
+                    <Link href="/products" className="block py-2 px-4 rounded-lg hover:bg-sparkle-pink/10 transition">
                       お見積もり
                     </Link>
                     <Link href="/company" className="block py-2 px-4 rounded-lg hover:bg-sparkle-pink/10 transition">
@@ -157,7 +157,7 @@ export default function Legal() {
             <h2 className="text-xl font-bold mb-2">ご不明な点がございましたら</h2>
             <p className="mb-4 opacity-90">お気軽にお問い合わせください</p>
             <Link
-              href="/estimate"
+              href="/products"
               className="inline-block bg-white text-sparkle-pink font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition"
             >
               お問い合わせ・お見積もり
@@ -184,7 +184,7 @@ export default function Legal() {
               <div>
                 <h3 className="text-xl font-bold mb-4">加工方法について</h3>
                 <ul className="space-y-2">
-                  <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
 
                 </ul>
               </div>

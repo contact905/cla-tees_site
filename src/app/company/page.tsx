@@ -31,7 +31,7 @@ export default function Company() {
               />
             </Link>
             <Link
-              href="/estimate"
+              href="/products"
               className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition"
             >
               LINE相談
@@ -45,7 +45,7 @@ export default function Company() {
                 <Link href="/" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
                   ホーム
                 </Link>
-                <Link href="/estimate" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
+                <Link href="/products" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
                   データ入稿・お見積もり
                 </Link>
                 <Link href="/products" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
@@ -187,7 +187,7 @@ export default function Company() {
                   無料でお見積もりいたします
                 </p>
                 <Link
-                  href="/estimate"
+                  href="/products"
                   className="inline-block bg-white text-sparkle-pink px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition"
                 >
                   お見積もりフォーム
@@ -200,7 +200,7 @@ export default function Company() {
             <h2 className="text-xl font-bold mb-2">ご不明な点がございましたら</h2>
             <p className="mb-4 opacity-90">お気軽にお問い合わせください</p>
             <Link
-              href="/estimate"
+              href="/products"
               className="inline-block bg-white text-sparkle-pink font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition"
             >
               お問い合わせ・お見積もり
@@ -226,7 +226,7 @@ export default function Company() {
               <div>
                 <h3 className="text-xl font-bold mb-4">加工方法について</h3>
                 <ul className="space-y-2">
-                  <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
 
                 </ul>
               </div>
@@ -269,7 +269,7 @@ export default function Company() {
 
             <div className="text-center mt-8 pt-8 border-t border-gray-700">
               <p className="text-sm">
-                © ORIGINAL PRINTING S PARKLE
+                © 株式会社LaMuse
               </p>
               <p className="text-xs mt-2">
                 思い出作りを全力でサポート致します。

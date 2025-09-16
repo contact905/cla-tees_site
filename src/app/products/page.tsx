@@ -20,11 +20,12 @@ export default function Products() {
   }, [searchParams]);
 
   const categories = [
-    { id: "all", name: "すべて" },
-    { id: "soccer", name: "サッカーTシャツ" },
-    { id: "basketball", name: "バスケTシャツ" },
-    { id: "baseball", name: "野球Tシャツ" },
-    { id: "classt", name: "クラスT" },
+    { id: "all", name: "全て" },
+    { id: "basketball", name: "バスケ" },
+    { id: "baseball", name: "野球" },
+    { id: "soccer", name: "サッカー" },
+    { id: "polo", name: "ポロシャツ" },
+    { id: "tshirt", name: "Tシャツ" },
   ];
 
   const products = [
@@ -82,27 +83,33 @@ export default function Products() {
     { id: "baseball-8", name: "野球ユニフォーム8", price: "¥1,600〜", image: "/クラT画像/野球8.png", sizes: "S-XL", category: "baseball" },
     
     // クラスT（ProductTabsと同期）
-    { id: "classt-1", name: "クラスT1", price: "¥1,300〜", image: "/クラT画像/クラスT1.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-2", name: "クラスT2", price: "¥1,300〜", image: "/クラT画像/クラスT2.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-3", name: "クラスT3", price: "¥1,300〜", image: "/クラT画像/クラスT3.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-4", name: "クラスT4", price: "¥1,300〜", image: "/クラT画像/クラスT4.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-5", name: "クラスT5", price: "¥1,300〜", image: "/クラT画像/クラスT5.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-6", name: "クラスT6", price: "¥1,300〜", image: "/クラT画像/クラスT6.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-7", name: "クラスT7", price: "¥1,300〜", image: "/クラT画像/クラスT7.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-8", name: "クラスT8", price: "¥1,300〜", image: "/クラT画像/クラスT8.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-9", name: "クラスT9", price: "¥1,300〜", image: "/クラT画像/クラスT9.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-10", name: "クラスT10", price: "¥1,300〜", image: "/クラT画像/クラスT10.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-11", name: "クラスT11", price: "¥1,300〜", image: "/クラT画像/クラスT11.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-12", name: "クラスT12", price: "¥1,300〜", image: "/クラT画像/クラスT12.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-13", name: "クラスT13", price: "¥1,300〜", image: "/クラT画像/クラスT13.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-14", name: "クラスT14", price: "¥1,300〜", image: "/クラT画像/クラスT14.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-15", name: "クラスT15", price: "¥1,300〜", image: "/クラT画像/クラスT15.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-16", name: "クラスT16", price: "¥1,300〜", image: "/クラT画像/クラスT16.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-17", name: "クラスT17", price: "¥1,300〜", image: "/クラT画像/クラスT17.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-18", name: "クラスT18", price: "¥1,300〜", image: "/クラT画像/クラスT18.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-19", name: "クラスT19", price: "¥1,300〜", image: "/クラT画像/クラスT19.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-20", name: "クラスT20", price: "¥1,300〜", image: "/クラT画像/クラスT20.png", sizes: "S-XL", category: "classt" },
-    { id: "classt-21", name: "クラスT21", price: "¥1,300〜", image: "/クラT画像/クラスT21.png", sizes: "S-XL", category: "classt" },
+    { id: "classt-1", name: "クラスT1", price: "¥1,300〜", image: "/クラT画像/クラスT1.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-2", name: "クラスT2", price: "¥1,300〜", image: "/クラT画像/クラスT2.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-3", name: "クラスT3", price: "¥1,300〜", image: "/クラT画像/クラスT3.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-4", name: "クラスT4", price: "¥1,300〜", image: "/クラT画像/クラスT4.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-5", name: "クラスT5", price: "¥1,300〜", image: "/クラT画像/クラスT5.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-6", name: "クラスT6", price: "¥1,300〜", image: "/クラT画像/クラスT6.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-7", name: "クラスT7", price: "¥1,300〜", image: "/クラT画像/クラスT7.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-8", name: "クラスT8", price: "¥1,300〜", image: "/クラT画像/クラスT8.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-9", name: "クラスT9", price: "¥1,300〜", image: "/クラT画像/クラスT9.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-10", name: "クラスT10", price: "¥1,300〜", image: "/クラT画像/クラスT10.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-11", name: "クラスT11", price: "¥1,300〜", image: "/クラT画像/クラスT11.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-12", name: "クラスT12", price: "¥1,300〜", image: "/クラT画像/クラスT12.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-13", name: "クラスT13", price: "¥1,300〜", image: "/クラT画像/クラスT13.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-14", name: "クラスT14", price: "¥1,300〜", image: "/クラT画像/クラスT14.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-15", name: "クラスT15", price: "¥1,300〜", image: "/クラT画像/クラスT15.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-16", name: "クラスT16", price: "¥1,300〜", image: "/クラT画像/クラスT16.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-17", name: "クラスT17", price: "¥1,300〜", image: "/クラT画像/クラスT17.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-18", name: "クラスT18", price: "¥1,300〜", image: "/クラT画像/クラスT18.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-19", name: "クラスT19", price: "¥1,300〜", image: "/クラT画像/クラスT19.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-20", name: "クラスT20", price: "¥1,300〜", image: "/クラT画像/クラスT20.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-21", name: "クラスT21", price: "¥1,300〜", image: "/クラT画像/クラスT21.png", sizes: "S-XL", category: "tshirt" },
+
+    // ポロシャツ
+    { id: "polo-1", name: "ポロシャツ1", price: "¥1,800〜", image: "/クラT画像/ポロシャツ1.png", sizes: "S-XL", category: "polo" },
+    { id: "polo-2", name: "ポロシャツ2", price: "¥1,800〜", image: "/クラT画像/ポロシャツ2.png", sizes: "S-XL", category: "polo" },
+    { id: "polo-3", name: "ドライポロ3", price: "¥1,800〜", image: "/クラT画像/ポロシャツ3.png", sizes: "S-XL", category: "polo" },
+    { id: "polo-4", name: "ポロシャツ4", price: "¥1,800〜", image: "/クラT画像/ポロシャツ4.png", sizes: "S-XL", category: "polo" },
 
   ];
 
@@ -171,7 +178,7 @@ export default function Products() {
                   <Link href="/products" className="block text-gray-700 hover:text-sparkle-pink transition">
                     商品一覧
                   </Link>
-                  <Link href="/estimate" className="block text-gray-700 hover:text-sparkle-pink transition">
+                  <Link href="/products" className="block text-gray-700 hover:text-sparkle-pink transition">
                     お見積もり
                   </Link>
                   <Link href="/guide" className="block text-gray-700 hover:text-sparkle-pink transition">
@@ -248,7 +255,7 @@ export default function Products() {
             <div className="text-center">
               <h2 className="text-lg font-bold mb-4">お見積もりはこちら</h2>
               <Link
-                href="/estimate"
+                href="/products"
                 className="inline-flex items-center gap-2 bg-sparkle-pink text-white px-6 py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition"
               >
                 無料見積もり
@@ -273,7 +280,7 @@ export default function Products() {
               <div>
                 <h3 className="text-xl font-bold mb-4">加工方法について</h3>
                 <ul className="space-y-2">
-                  <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
                 </ul>
               </div>
               <div>
@@ -315,7 +322,7 @@ export default function Products() {
 
             <div className="text-center mt-8 pt-8 border-t border-gray-700">
               <p className="text-sm">
-                © ORIGINAL PRINTING S PARKLE
+                © 株式会社LaMuse
               </p>
               <p className="text-xs mt-2">
                 思い出作りを全力でサポート致します。

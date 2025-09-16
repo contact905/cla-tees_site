@@ -148,7 +148,7 @@ export default function EstimatePage() {
                 <Link href="/" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
                   ホーム
                 </Link>
-                <Link href="/estimate" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
+                <Link href="/products" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
                   データ入稿・お見積もり
                 </Link>
                 <Link href="/products" className="block text-lg font-bold py-3 border-b hover:text-sparkle-pink transition">
@@ -409,16 +409,15 @@ export default function EstimatePage() {
               <div>
                 <h3 className="text-xl font-bold mb-4">加工方法について</h3>
                 <ul className="space-y-2">
-                  <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もり診断</Link>
+                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もり診断</Link>
                   <Link href="#" className="block hover:text-sparkle-pink transition">加工方法</Link>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-4">スパークルについて</h3>
+                <h3 className="text-xl font-bold mb-4">CLA TEE'Sについて</h3>
                 <ul className="space-y-2">
                   <Link href="/company" className="block hover:text-sparkle-pink transition">会社概要</Link>
                   <Link href="/legal" className="block hover:text-sparkle-pink transition">特定商取引に基づく表記</Link>
-                  <Link href="#" className="block hover:text-sparkle-pink transition">採用情報</Link>
                   <Link href="/privacy" className="block hover:text-sparkle-pink transition">プライバシーポリシー</Link>
                   <Link href="#" className="block hover:text-sparkle-pink transition">ブログ / コラム</Link>
                 </ul>
@@ -444,7 +443,7 @@ export default function EstimatePage() {
 
             <div className="text-center mt-8 pt-8 border-t border-gray-700">
               <p className="text-sm">
-                © ORIGINAL PRINTING S PARKLE
+                © 株式会社LaMuse
               </p>
               <p className="text-xs mt-2">
                 思い出作りを全力でサポート致します。

@@ -95,7 +95,7 @@ export default function Shipping() {
                 会社概要
               </Link>
               <Link
-                href="/estimate"
+                href="/products"
                 className="block py-3 text-lg font-medium bg-sparkle-pink text-white rounded-lg text-center hover:bg-pink-600 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -284,7 +284,7 @@ export default function Shipping() {
               <div>
                 <h3 className="text-xl font-bold mb-4">加工方法について</h3>
                 <ul className="space-y-2">
-                  <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
 
                 </ul>
               </div>

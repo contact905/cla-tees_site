@@ -22,7 +22,7 @@ interface Product {
 
 const productCategories: Record<string, { label: string; products: Product[] }> = {
   soccer: {
-    label: "⚽ サッカーT",
+    label: "サッカーT",
     products: [
       {
         id: "soccer-1",
@@ -207,7 +207,7 @@ const productCategories: Record<string, { label: string; products: Product[] }> 
     ],
   },
   basketball: {
-    label: "🏀 バスケT",
+    label: "バスケT",
     products: [
       {
         id: "basketball-1",
@@ -383,7 +383,7 @@ const productCategories: Record<string, { label: string; products: Product[] }> 
     ],
   },
   baseball: {
-    label: "⚾ 野球T",
+    label: "野球T",
     products: [
       {
         id: "baseball-1",
@@ -459,9 +459,49 @@ const productCategories: Record<string, { label: string; products: Product[] }> 
       },
     ],
   },
-
+  polo: {
+    label: "ポロシャツ",
+    products: [
+      {
+        id: "polo-1",
+        name: "ポロシャツ1",
+        price: "¥1,500〜",
+        image: "/クラT画像/ポロシャツ1.png",
+        sizes: "S-XL",
+        colors: 8,
+        isNew: true,
+      },
+      {
+        id: "polo-2",
+        name: "ポロシャツ2",
+        price: "¥1,500〜",
+        image: "/クラT画像/ポロシャツ2.png",
+        sizes: "S-XL",
+        colors: 8,
+        isNew: true,
+      },
+      {
+        id: "polo-3",
+        name: "ポロシャツ3",
+        price: "¥1,500〜",
+        image: "/クラT画像/ポロシャツ3.png",
+        sizes: "S-XL",
+        colors: 8,
+        isNew: true,
+      },
+      {
+        id: "polo-4",
+        name: "ポロシャツ4",
+        price: "¥1,500〜",
+        image: "/クラT画像/ポロシャツ4.png",
+        sizes: "S-XL",
+        colors: 8,
+        isNew: true,
+      },
+    ],
+  },
   classt: {
-    label: "👕 クラスT",
+    label: "Tシャツ",
     products: [
       {
         id: "classt-1",

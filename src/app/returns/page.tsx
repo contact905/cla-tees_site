@@ -112,7 +112,7 @@ export default function Returns() {
                   会社概要
                 </Link>
                 <Link
-                  href="/estimate"
+                  href="/products"
                   className="block bg-sparkle-pink text-white px-6 py-3 rounded-full text-center font-bold hover:bg-pink-600 transition"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -221,7 +221,7 @@ export default function Returns() {
             <div>
               <h3 className="text-xl font-bold mb-4">加工方法について</h3>
               <ul className="space-y-2">
-                <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
 
               </ul>
             </div>
@@ -264,7 +264,7 @@ export default function Returns() {
 
           <div className="text-center mt-8 pt-8 border-t border-gray-700">
             <p className="text-sm">
-              © ORIGINAL PRINTING S PARKLE
+              © 株式会社LaMuse
             </p>
             <p className="text-xs mt-2">
               思い出作りを全力でサポート致します。

@@ -593,7 +593,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold">{method.title}</h3>
                 </div>
                 {method.title === "刺繍" ? (
-                  <Link href="/estimate" className="block p-6 hover:bg-gray-50 transition cursor-pointer">
+                  <Link href="/products" className="block p-6 hover:bg-gray-50 transition cursor-pointer">
                     <p className="text-gray-600 mb-4">{method.description}</p>
                     <p className="text-2xl font-bold text-gray-800">{method.price}</p>
                   </Link>
@@ -627,7 +627,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4">加工方法について</h3>
               <ul className="space-y-2">
-                <Link href="/estimate" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もり</Link>
 
               </ul>
             </div>
@@ -670,7 +670,7 @@ export default function Home() {
 
           <div className="text-center mt-8 pt-8 border-t border-gray-700">
             <p className="text-sm">
-              © ORIGINAL PRINTING S PARKLE
+              © 株式会社LaMuse
             </p>
             <p className="text-xs mt-2">
               思い出作りを全力でサポート致します。
