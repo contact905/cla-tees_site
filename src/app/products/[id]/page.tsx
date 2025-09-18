@@ -2,12 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { PriceCalculator } from "@/components/PriceCalculator";
 import { Menu, X } from "lucide-react";
-
-interface PageProps {
-  params: { id: string };
-}
 
 // 簡易データ。実際は API や DB から取得する想定
 const products: Record<string, { title: string; image: string; price: number }> = {
@@ -18,11 +15,13 @@ const products: Record<string, { title: string; image: string; price: number }> 
   },
 };
 
-export default function ProductDetailPage({ params }: PageProps) {
+export default function ProductDetailPage() {
+  const params = useParams();
+  const id = params.id as string;
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const product = products[params.id] ?? {
-    title: `商品 ${params.id}`,
+  const product = products[id] ?? {
+    title: `商品 ${id}`,
     image: "/api/placeholder/400/400",
     price: 0,
   };

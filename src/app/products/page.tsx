@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Phone, Mail, ArrowRight, Instagram } from "lucide-react";
 import { WavePatternTop, WavePatternBottom } from "@/components/WavePattern";
 
-export default function Products() {
+function ProductsContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
   const searchParams = useSearchParams();
@@ -347,5 +347,13 @@ export default function Products() {
         </footer>
       </div>
     </div>
+  );
+}
+
+export default function Products() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductsContent />
+    </Suspense>
   );
 }
