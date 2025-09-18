@@ -46,15 +46,7 @@ export default function ProductDetailPage({ params }: PageProps) {
               <Link href="/" className="flex items-center">
                 <Image src="/logo.png" alt="SPARKLE" width={120} height={48} className="h-10 w-auto" />
               </Link>
-              <Link
-                href="https://lin.ee/FtxOG2s"
-                className="ml-2 bg-green-500 text-white px-3 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1.5 shrink-0"
-              >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.84 5.42-1.19 7.18-.15.76-.45 1.02-.75 1.04-.64.04-1.13-.42-1.75-.83-.97-.64-1.52-1.03-2.47-1.66-1.09-.71-.38-1.1.24-1.74.16-.16 2.92-2.68 2.98-2.91.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-2.03 1.29-5.73 3.78-.54.37-1.03.56-1.47.55-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.43-1.46-.91.03-.25.46-.51 1.28-.78 5.01-2.18 8.35-3.63 10.02-4.35 1.43-.61 1.72-.72 1.91-.72.04 0 .14 0 .2.07.05.05.06.14.06.18-.01.06-.01.24-.02.38z" />
-                </svg>
-                LINEで相談
-              </Link>
+
             </div>
             <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -84,19 +76,7 @@ export default function ProductDetailPage({ params }: PageProps) {
               <div className="flex-1 p-6">
                 <div className="space-y-6">
                   <div className="space-y-4">
-                    <Link
-                      href="https://line.me/R/ti/p/@895gydcc"
-                      className="block w-full bg-green-500 text-white text-center py-4 rounded-full font-bold text-lg hover:bg-green-600 transition"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      🎯 LINEで相談・見積もり
-                    </Link>
-                    <button
-                      className="block w-full bg-yellow-300 text-gray-800 text-center py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      💰 料金シミュレーター
-                    </button>
+
                   </div>
                   <div className="space-y-4 pt-6 border-t">
                     <Link 

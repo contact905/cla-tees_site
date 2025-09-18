@@ -4,16 +4,14 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Menu, X, Phone, Mail, ArrowRight, Plus, Minus, ShoppingCart, Instagram } from "lucide-react";
+import { Menu, X, Phone, Mail, ArrowRight, Instagram } from "lucide-react";
 import { WavePatternTop, WavePatternBottom } from "@/components/WavePattern";
 
 export default function ProductDetail() {
   const params = useParams();
   const productId = params.id as string;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [quantity, setQuantity] = useState(10);
-  const [selectedSize, setSelectedSize] = useState("M");
-  const [selectedPrintMethod, setSelectedPrintMethod] = useState("silkscreen");
+
   const [activeTab, setActiveTab] = useState("details");
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -73,27 +71,22 @@ export default function ProductDetail() {
       { id: "baseball-8", name: "野球ユニフォーム8", price: 1600, image: "/クラT画像/野球8.png", sizes: ["S", "M", "L", "XL"], colors: ["ネイビー", "ホワイト"], description: "高品質な野球ユニフォーム", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
     ],
     classt: [
-      { id: "classt-1", name: "クラスT1", price: 1300, image: "/クラT画像/クラスT1.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-2", name: "クラスT2", price: 1300, image: "/クラT画像/クラスT2.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-3", name: "クラスT3", price: 1300, image: "/クラT画像/クラスT3.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-4", name: "クラスT4", price: 1300, image: "/クラT画像/クラスT4.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-5", name: "クラスT5", price: 1300, image: "/クラT画像/クラスT5.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-6", name: "クラスT6", price: 1300, image: "/クラT画像/クラスT6.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-7", name: "クラスT7", price: 1300, image: "/クラT画像/クラスT7.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-8", name: "クラスT8", price: 1300, image: "/クラT画像/クラスT8.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-9", name: "クラスT9", price: 1300, image: "/クラT画像/クラスT9.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-10", name: "クラスT10", price: 1300, image: "/クラT画像/クラスT10.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-11", name: "クラスT11", price: 1300, image: "/クラT画像/クラスT11.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-12", name: "クラスT12", price: 1300, image: "/クラT画像/クラスT12.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-13", name: "クラスT13", price: 1300, image: "/クラT画像/クラスT13.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-14", name: "クラスT14", price: 1300, image: "/クラT画像/クラスT14.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-15", name: "クラスT15", price: 1300, image: "/クラT画像/クラスT15.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-16", name: "クラスT16", price: 1300, image: "/クラT画像/クラスT16.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-17", name: "クラスT17", price: 1300, image: "/クラT画像/クラスT17.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-18", name: "クラスT18", price: 1300, image: "/クラT画像/クラスT18.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-19", name: "クラスT19", price: 1300, image: "/クラT画像/クラスT19.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-20", name: "クラスT20", price: 1300, image: "/クラT画像/クラスT20.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-21", name: "クラスT21", price: 1300, image: "/クラT画像/クラスT21.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-1", name: "Tシャツ1", price: 1300, image: "/クラT画像/Tシャツ1.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-2", name: "Tシャツ2", price: 1300, image: "/クラT画像/Tシャツ2.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-3", name: "Tシャツ3", price: 1300, image: "/クラT画像/Tシャツ3.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-4", name: "Tシャツ4", price: 1300, image: "/クラT画像/Tシャツ4.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-5", name: "Tシャツ5", price: 1300, image: "/クラT画像/Tシャツ5.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-6", name: "Tシャツ6", price: 1300, image: "/クラT画像/Tシャツ6.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-7", name: "Tシャツ7", price: 1300, image: "/クラT画像/Tシャツ7.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-8", name: "Tシャツ8", price: 1300, image: "/クラT画像/Tシャツ8.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-9", name: "Tシャツ9", price: 1300, image: "/クラT画像/Tシャツ9.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-10", name: "Tシャツ10", price: 1300, image: "/クラT画像/Tシャツ10.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-11", name: "Tシャツ11", price: 1300, image: "/クラT画像/Tシャツ11.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-12", name: "Tシャツ12", price: 1300, image: "/クラT画像/Tシャツ12.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-13", name: "Tシャツ13", price: 1300, image: "/クラT画像/Tシャツ13.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+      { id: "classt-14", name: "Tシャツ14", price: 1300, image: "/クラT画像/Tシャツ14.png", sizes: ["S", "M", "L", "XL"], colors: ["ホワイト", "ブラック"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+
+  
     ],
 
   };
@@ -164,26 +157,21 @@ export default function ProductDetail() {
       "baseball-7": ["/クラT画像/野球7.png"],
       "baseball-8": ["/クラT画像/野球8.png"],
       "classt-1": ["/クラT画像/クラスT1.png"],
-      "classt-2": ["/クラT画像/クラスT2.png"],
-      "classt-3": ["/クラT画像/クラスT3.png"],
-      "classt-4": ["/クラT画像/クラスT4.png"],
-      "classt-5": ["/クラT画像/クラスT5.png"],
-      "classt-6": ["/クラT画像/クラスT6.png"],
-      "classt-7": ["/クラT画像/クラスT7.png"],
-      "classt-8": ["/クラT画像/クラスT8.png"],
-      "classt-9": ["/クラT画像/クラスT9.png"],
-      "classt-10": ["/クラT画像/クラスT10.png"],
-      "classt-11": ["/クラT画像/クラスT11.png"],
-      "classt-12": ["/クラT画像/クラスT12.png"],
-      "classt-13": ["/クラT画像/クラスT13.png"],
-      "classt-14": ["/クラT画像/クラスT14.png"],
-      "classt-15": ["/クラT画像/クラスT15.png"],
-      "classt-16": ["/クラT画像/クラスT16.png"],
-      "classt-17": ["/クラT画像/クラスT17.png"],
-      "classt-18": ["/クラT画像/クラスT18.png"],
-      "classt-19": ["/クラT画像/クラスT19.png"],
-      "classt-20": ["/クラT画像/クラスT20.png"],
-      "classt-21": ["/クラT画像/クラスT21.png"],
+    "classt-2": ["/クラT画像/クラスT2.png"],
+    "classt-3": ["/クラT画像/クラスT3.png"],
+    "classt-4": ["/クラT画像/クラスT4.png"],
+    "classt-5": ["/クラT画像/クラスT5.png"],
+    "classt-6": ["/クラT画像/クラスT6.png"],
+    "classt-7": ["/クラT画像/クラスT7.png"],
+    "classt-8": ["/クラT画像/クラスT8.png"],
+    "classt-9": ["/クラT画像/クラスT9.png"],
+    "classt-10": ["/クラT画像/クラスT10.png"],
+    "classt-11": ["/クラT画像/クラスT11.png"],
+    "classt-12": ["/クラT画像/クラスT12.png"],
+    "classt-13": ["/クラT画像/クラスT13.png"],
+    "classt-14": ["/クラT画像/クラスT14.png"],
+
+  
 
     };
     return imageMap[productId] || [product.image];
@@ -251,27 +239,6 @@ export default function ProductDetail() {
     }
   ];
 
-  // 自動見積もり計算
-  const calculateEstimate = () => {
-    const basePrice = product.price;
-    const selectedPricing = printPricing.find(p => p.method === selectedPrintMethod);
-    if (!selectedPricing) return 0;
-
-    let printPrice = 0;
-    for (const tier of selectedPricing.pricing) {
-      const [min, max] = tier.quantity.includes("以上") 
-        ? [parseInt(tier.quantity), Infinity]
-        : tier.quantity.split("-").map(n => parseInt(n.replace("枚", "")));
-      
-      if (quantity >= min && (max === Infinity || quantity <= max)) {
-        printPrice = parseInt(tier.price.replace("¥", "").replace(",", ""));
-        break;
-      }
-    }
-
-    return (basePrice + printPrice) * quantity;
-  };
-
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Mobile-First Container */}
@@ -300,19 +267,8 @@ export default function ProductDetail() {
                   />
                 </Link>
 
-                {/* LINE Button & Menu Toggle */}
+                {/* Menu Toggle */}
                 <div className="flex items-center space-x-2">
-                  <a
-                    href="https://line.me/R/ti/p/@895gydcc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
-                  >
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.84 5.42-1.19 7.18-.15.76-.45 1.02-.75 1.04-.64.04-1.13-.42-1.75-.83-.97-.64-1.52-1.03-2.47-1.66-1.09-.71-.38-1.1.24-1.74.16-.16 2.92-2.68 2.98-2.91.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-2.03 1.29-5.73 3.78-.54.37-1.03.56-1.47.55-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.43-1.46-.91.03-.25.46-.51 1.28-.78 5.01-2.18 8.35-3.63 10.02-4.35 1.43-.61 1.72-.72 1.91-.72.04 0 .14 0 .2.07.05.05.06.14.06.18-.01.06-.01.24-.02.38z"/>
-                    </svg>
-                    LINEで相談
-                  </a>
                   <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="p-2 text-gray-600 hover:text-sparkle-pink transition"
@@ -460,90 +416,45 @@ export default function ProductDetail() {
           <div className="px-4 py-6">
             {activeTab === "details" && (
               <div className="space-y-6">
-                {/* 数量選択 */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">数量</label>
-                  <div className="flex items-center space-x-3">
-                    <button
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50"
-                    >
-                      <Minus size={16} />
-                    </button>
-                    <span className="text-lg font-medium w-16 text-center">{quantity}枚</span>
-                    <button
-                      onClick={() => setQuantity(quantity + 1)}
-                      className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50"
-                    >
-                      <Plus size={16} />
-                    </button>
-                  </div>
+                {/* 商品説明 */}
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-bold text-lg mb-2">商品について</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {product.description}
+                  </p>
                 </div>
 
-                {/* サイズ選択 */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">サイズ</label>
-                  <div className="grid grid-cols-3 gap-2">
-                    {product.sizes.map((size: string) => (
-                      <button
-                        key={size}
-                        onClick={() => setSelectedSize(size)}
-                        className={`py-2 px-3 text-sm font-medium rounded-lg border transition ${
-                          selectedSize === size
-                            ? "border-sparkle-pink bg-sparkle-pink text-white"
-                            : "border-gray-300 text-gray-700 hover:border-gray-400"
-                        }`}
-                      >
-                        {size}
-                      </button>
-                    ))}
-                  </div>
-                </div>
+                {/* CTAボタンエリア */}
+                <div className="space-y-3">
 
-                {/* 加工方法選択 */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">加工方法</label>
-                  <div className="space-y-2">
-                    {printPricing.map((method) => (
-                      <label key={method.method} className="flex items-center space-x-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                        <input
-                          type="radio"
-                          name="printMethod"
-                          value={method.method}
-                          checked={selectedPrintMethod === method.method}
-                          onChange={(e) => setSelectedPrintMethod(e.target.value)}
-                          className="text-sparkle-pink"
-                        />
-                        <div>
-                          <div className="font-medium">{method.name}</div>
-                          <div className="text-sm text-gray-500">{method.description}</div>
-                        </div>
-                      </label>
-                    ))}
-                  </div>
-                </div>
+                  
+                  {/* 購入ボタン（工事中ページへリダイレクト） */}
+                  <Link
+                    href="/under-construction"
+                    className="block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 px-6 rounded-full font-bold text-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                  >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
+                      <path d="M9 8V17H11V8H9ZM13 8V17H15V8H13Z"/>
+                    </svg>
+                    🛒 ECサイトで購入
+                  </Link>
+                  
+                  {/* LINEで相談ボタン */}
+                  <a
+                    href="https://line.me/R/ti/p/@your-line-id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-6 rounded-full font-bold text-center hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 mt-3"
+                  >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                    </svg>
+                    💬 LINEで相談
+                  </a>
+                  
 
-                {/* 見積もり結果 */}
-                <div className="bg-sparkle-pink bg-opacity-10 p-4 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium">合計金額</span>
-                    <span className="text-2xl font-bold text-sparkle-pink">
-                      ¥{calculateEstimate().toLocaleString()}
-                    </span>
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    商品代: ¥{(product.price * quantity).toLocaleString()} + 加工代
-                  </div>
                 </div>
-
-                {/* 自動見積もりボタン */}
-                <Link
-                  href="/products"
-                  className="block w-full bg-sparkle-pink text-white py-4 px-6 rounded-full font-bold text-center hover:bg-sparkle-pink-dark transition"
-                >
-                  <ShoppingCart className="inline-block mr-2" size={20} />
-                  この条件で見積もり依頼
-                </Link>
               </div>
             )}
 

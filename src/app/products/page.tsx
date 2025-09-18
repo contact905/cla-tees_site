@@ -83,27 +83,22 @@ export default function Products() {
     { id: "baseball-8", name: "野球ユニフォーム8", price: "¥1,600〜", image: "/クラT画像/野球8.png", sizes: "S-XL", category: "baseball" },
     
     // クラスT（ProductTabsと同期）
-    { id: "classt-1", name: "クラスT1", price: "¥1,300〜", image: "/クラT画像/クラスT1.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-2", name: "クラスT2", price: "¥1,300〜", image: "/クラT画像/クラスT2.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-3", name: "クラスT3", price: "¥1,300〜", image: "/クラT画像/クラスT3.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-4", name: "クラスT4", price: "¥1,300〜", image: "/クラT画像/クラスT4.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-5", name: "クラスT5", price: "¥1,300〜", image: "/クラT画像/クラスT5.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-6", name: "クラスT6", price: "¥1,300〜", image: "/クラT画像/クラスT6.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-7", name: "クラスT7", price: "¥1,300〜", image: "/クラT画像/クラスT7.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-8", name: "クラスT8", price: "¥1,300〜", image: "/クラT画像/クラスT8.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-9", name: "クラスT9", price: "¥1,300〜", image: "/クラT画像/クラスT9.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-10", name: "クラスT10", price: "¥1,300〜", image: "/クラT画像/クラスT10.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-11", name: "クラスT11", price: "¥1,300〜", image: "/クラT画像/クラスT11.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-12", name: "クラスT12", price: "¥1,300〜", image: "/クラT画像/クラスT12.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-13", name: "クラスT13", price: "¥1,300〜", image: "/クラT画像/クラスT13.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-14", name: "クラスT14", price: "¥1,300〜", image: "/クラT画像/クラスT14.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-15", name: "クラスT15", price: "¥1,300〜", image: "/クラT画像/クラスT15.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-16", name: "クラスT16", price: "¥1,300〜", image: "/クラT画像/クラスT16.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-17", name: "クラスT17", price: "¥1,300〜", image: "/クラT画像/クラスT17.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-18", name: "クラスT18", price: "¥1,300〜", image: "/クラT画像/クラスT18.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-19", name: "クラスT19", price: "¥1,300〜", image: "/クラT画像/クラスT19.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-20", name: "クラスT20", price: "¥1,300〜", image: "/クラT画像/クラスT20.png", sizes: "S-XL", category: "tshirt" },
-    { id: "classt-21", name: "クラスT21", price: "¥1,300〜", image: "/クラT画像/クラスT21.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-1", name: "Tシャツ1", price: "¥1,300〜", image: "/クラT画像/Tシャツ1.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-2", name: "Tシャツ2", price: "¥1,300〜", image: "/クラT画像/Tシャツ2.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-3", name: "Tシャツ3", price: "¥1,300〜", image: "/クラT画像/Tシャツ3.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-4", name: "Tシャツ4", price: "¥1,300〜", image: "/クラT画像/Tシャツ4.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-5", name: "Tシャツ5", price: "¥1,300〜", image: "/クラT画像/Tシャツ5.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-6", name: "Tシャツ6", price: "¥1,300〜", image: "/クラT画像/Tシャツ6.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-7", name: "Tシャツ7", price: "¥1,300〜", image: "/クラT画像/Tシャツ7.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-8", name: "Tシャツ8", price: "¥1,300〜", image: "/クラT画像/Tシャツ8.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-9", name: "Tシャツ9", price: "¥1,300〜", image: "/クラT画像/Tシャツ9.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-10", name: "Tシャツ10", price: "¥1,300〜", image: "/クラT画像/Tシャツ10.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-11", name: "Tシャツ11", price: "¥1,300〜", image: "/クラT画像/Tシャツ11.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-12", name: "Tシャツ12", price: "¥1,300〜", image: "/クラT画像/Tシャツ12.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-13", name: "Tシャツ13", price: "¥1,300〜", image: "/クラT画像/Tシャツ13.png", sizes: "S-XL", category: "tshirt" },
+    { id: "classt-14", name: "Tシャツ14", price: "¥1,300〜", image: "/クラT画像/Tシャツ14.png", sizes: "S-XL", category: "tshirt" },
+
+
 
     // ポロシャツ
     { id: "polo-1", name: "ポロシャツ1", price: "¥1,800〜", image: "/クラT画像/ポロシャツ1.png", sizes: "S-XL", category: "polo" },
@@ -151,12 +146,12 @@ export default function Products() {
                     href="https://line.me/R/ti/p/@895gydcc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
+                    className="bg-gradient-to-r from-green-500 to-green-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:from-green-600 hover:to-green-700 transition-all duration-300 flex items-center gap-2 whitespace-nowrap shrink-0 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.84 5.42-1.19 7.18-.15.76-.45 1.02-.75 1.04-.64.04-1.13-.42-1.75-.83-.97-.64-1.52-1.03-2.47-1.66-1.09-.71-.38-1.1.24-1.74.16-.16 2.92-2.68 2.98-2.91.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-2.03 1.29-5.73 3.78-.54.37-1.03.56-1.47.55-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.43-1.46-.91.03-.25.46-.51 1.28-.78 5.01-2.18 8.35-3.63 10.02-4.35 1.43-.61 1.72-.72 1.91-.72.04 0 .14 0 .2.07.05.05.06.14.06.18-.01.06-.01.24-.02.38z" />
                     </svg>
-                    LINEで相談
+                    💬 LINE相談
                   </a>
                   <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -219,31 +214,51 @@ export default function Products() {
             </div>
           </div>
 
-          {/* Products Grid - 2 Columns */}
+          {/* Products Grid - 視覚重視レイアウト */}
           <div className="px-4 py-6">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-6">
               {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition flex flex-col h-full">
-                  <div className="aspect-square relative">
+                <div key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                  {/* 大きな商品画像 */}
+                  <div className="relative">
                     <Image
                       src={product.image}
                       alt={product.name}
-                      fill
-                      className="object-cover"
+                      width={400}
+                      height={300}
+                      className="w-full h-64 object-cover"
                     />
                   </div>
-                  <div className="p-3 flex flex-col h-full">
-                    <div className="flex-grow">
-                      <h3 className="font-bold text-sm mb-1 line-clamp-2">{product.name}</h3>
-                      <p className="text-sparkle-pink font-bold text-lg mb-1">{product.price}</p>
-                      <p className="text-gray-600 text-xs mb-3">{product.sizes}</p>
+                  
+                  {/* 商品情報 */}
+                  <div className="p-6">
+                    <h3 className="font-bold text-xl mb-2 text-gray-800">{product.name}</h3>
+                    <p className="text-sparkle-pink font-bold text-2xl mb-4">{product.price}</p>
+                    <p className="text-gray-600 text-sm mb-4">{product.sizes}</p>
+                    
+                    {/* ボタンエリア */}
+                    <div className="flex gap-3">
+                      {/* LINE相談ボタン */}
+                      <a
+                        href={`https://line.me/R/ti/p/@895gydcc?text=${encodeURIComponent(`${product.name}について相談したいです`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-bold text-center hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.84 5.42-1.19 7.18-.15.76-.45 1.02-.75 1.04-.64.04-1.13-.42-1.75-.83-.97-.64-1.52-1.03-2.47-1.66-1.09-.71-.38-1.1.24-1.74.16-.16 2.92-2.68 2.98-2.91.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-2.03 1.29-5.73 3.78-.54.37-1.03.56-1.47.55-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.43-1.46-.91.03-.25.46-.51 1.28-.78 5.01-2.18 8.35-3.63 10.02-4.35 1.43-.61 1.72-.72 1.91-.72.04 0 .14 0 .2.07.05.05.06.14.06.18-.01.06-.01.24-.02.38z" />
+                        </svg>
+                        💬 LINE相談
+                      </a>
+                      
+                      {/* 詳細ボタン */}
+                      <Link
+                        href={`/product-detail/${product.id}`}
+                        className="flex-1 bg-sparkle-pink text-white py-3 px-4 rounded-xl font-bold text-center hover:bg-sparkle-pink-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      >
+                        詳細を見る
+                      </Link>
                     </div>
-                    <Link
-                      href={`/product-detail/${product.id}`}
-                      className="block w-full bg-sparkle-pink text-white text-center py-2 rounded-md text-sm font-medium hover:bg-sparkle-pink-dark transition mt-auto"
-                    >
-                      詳細を見る
-                    </Link>
                   </div>
                 </div>
               ))}
