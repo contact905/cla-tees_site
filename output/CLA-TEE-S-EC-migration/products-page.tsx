@@ -63,11 +63,11 @@ export default function Products() {
     { id: "6", name: "コットンT", price: "¥1,500〜", image: "/クラT画像/コットンT.png", sizes: "XS-5XL", category: "classt" },
     { id: "8", name: "ポロシャツ", price: "¥2,200〜", image: "/クラT画像/ポロシャツ.png", sizes: "XS-5XL", category: "classt" },
     { id: "10", name: "ヘビーウェイトTシャツ", price: "¥1,500〜", image: "/クラT画像/ヘビーウェイトT.png", sizes: "XS-5XL", category: "classt" },
-     { id: "classt-1", name: "クラスT1", price: "¥1,500〜", image: "/クラT画像/クラスT1.png", sizes: "XS-5XL", category: "classt" },
-     { id: "classt-2", name: "クラスT2", price: "¥1,500〜", image: "/クラT画像/クラスT2.png", sizes: "XS-5XL", category: "classt" },
-     { id: "classt-3", name: "クラスT3", price: "¥1,500〜", image: "/クラT画像/クラスT3.png", sizes: "XS-5XL", category: "classt" },
-     { id: "classt-4", name: "クラスT4", price: "¥1,500〜", image: "/クラT画像/クラスT4.png", sizes: "XS-5XL", category: "classt" },
-     { id: "classt-5", name: "クラスT5", price: "¥1,500〜", image: "/クラT画像/クラスT5.png", sizes: "XS-5XL", category: "classt" },
+     { id: "classt-1", name: "Tシャツ1", price: "¥1,500〜", image: "/クラT画像/Tシャツ1.png", sizes: "XS-5XL", category: "classt" },
+    { id: "classt-2", name: "Tシャツ2", price: "¥1,500〜", image: "/クラT画像/Tシャツ2.png", sizes: "XS-5XL", category: "classt" },
+    { id: "classt-3", name: "Tシャツ3", price: "¥1,500〜", image: "/クラT画像/Tシャツ3.png", sizes: "XS-5XL", category: "classt" },
+    { id: "classt-4", name: "Tシャツ4", price: "¥1,500〜", image: "/クラT画像/Tシャツ4.png", sizes: "XS-5XL", category: "classt" },
+    { id: "classt-5", name: "Tシャツ5", price: "¥1,500〜", image: "/クラT画像/Tシャツ5.png", sizes: "XS-5XL", category: "classt" },
   ];
 
   const filteredProducts = activeCategory === "all" 

@@ -53,11 +53,11 @@ export default function ProductDetail() {
       { id: "6", name: "コットンT", price: 1500, image: "/クラT画像/コットンT.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "肌触りの良いコットンTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
       { id: "8", name: "ポロシャツ", price: 2200, image: "/クラT画像/ポロシャツ.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "上品なポロシャツ", material: "ポリエステル100%", isNew: false, isSale: false, isTemplate: false },
       { id: "10", name: "ヘビーウェイトTシャツ", price: 1500, image: "/クラT画像/ヘビーウェイトT.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ホワイト", "ブラック", "ネイビー", "レッド", "ブルー"], description: "厚手で丈夫なヘビーウェイトTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-1", name: "クラスT1", price: 1500, image: "/クラT画像/クラスT1.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-2", name: "クラスT2", price: 1500, image: "/クラT画像/クラスT2.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-3", name: "クラスT3", price: 1500, image: "/クラT画像/クラスT3.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-4", name: "クラスT4", price: 1500, image: "/クラT画像/クラスT4.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
-      { id: "classt-5", name: "クラスT5", price: 1500, image: "/クラT画像/クラスT5.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false }
+      { id: "classt-1", name: "Tシャツ1", price: 1500, image: "/クラT画像/Tシャツ1.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+    { id: "classt-2", name: "Tシャツ2", price: 1500, image: "/クラT画像/Tシャツ2.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+    { id: "classt-3", name: "Tシャツ3", price: 1500, image: "/クラT画像/Tシャツ3.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+    { id: "classt-4", name: "Tシャツ4", price: 1500, image: "/クラT画像/Tシャツ4.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false },
+    { id: "classt-5", name: "Tシャツ5", price: 1500, image: "/クラT画像/Tシャツ5.png", sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"], colors: ["ブラック", "ホワイト", "グレー"], description: "高品質なクラスTシャツ", material: "コットン100%", isNew: false, isSale: false, isTemplate: false }
     ]
   };
 
@@ -104,11 +104,11 @@ export default function ProductDetail() {
       "6": ["/クラT画像/コットンT.png"],
       "8": ["/クラT画像/ポロシャツ.png"],
       "10": ["/クラT画像/ヘビーウェイトT.png"],
-      "classt-1": ["/クラT画像/クラスT1.png"],
-      "classt-2": ["/クラT画像/クラスT2.png"],
-      "classt-3": ["/クラT画像/クラスT3.png"],
-      "classt-4": ["/クラT画像/クラスT4.png"],
-      "classt-5": ["/クラT画像/クラスT5.png"]
+      "classt-1": ["/クラT画像/Tシャツ1.png"],
+    "classt-2": ["/クラT画像/Tシャツ2.png"],
+    "classt-3": ["/クラT画像/Tシャツ3.png"],
+    "classt-4": ["/クラT画像/Tシャツ4.png"],
+    "classt-5": ["/クラT画像/Tシャツ5.png"]
     };
     return imageMap[productId] || [product.image];
   };
