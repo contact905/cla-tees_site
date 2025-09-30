@@ -35,7 +35,7 @@ export const WavePattern: React.FC<WavePatternProps> = ({
 
 export const WavePatternTop: React.FC<WavePatternProps> = (props) => {
   return (
-    <div className="absolute inset-x-0 top-0 h-32 overflow-hidden pointer-events-none">
+    <div className="absolute inset-x-0 top-0 h-16 md:h-24 lg:h-32 overflow-hidden pointer-events-none">
       <WavePattern {...props} flip={true} />
     </div>
   );
@@ -43,7 +43,7 @@ export const WavePatternTop: React.FC<WavePatternProps> = (props) => {
 
 export const WavePatternBottom: React.FC<WavePatternProps> = (props) => {
   return (
-    <div className="absolute inset-x-0 bottom-0 h-32 overflow-hidden pointer-events-none">
+    <div className="absolute inset-x-0 bottom-0 h-16 md:h-24 lg:h-32 overflow-hidden pointer-events-none">
       <WavePattern {...props} />
     </div>
   );

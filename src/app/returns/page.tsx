@@ -16,9 +16,9 @@ export default function Returns() {
       {/* Header - Mobile First */}
       <header className="sticky top-0 z-50 bg-white">
         {/* Top Bar - Mobile Optimized */}
-        <div className="bg-sparkle-pink text-white py-2">
+        <div className="bg-sparkle-pink text-white py-3">
           <div className="px-4 text-center">
-            <span className="text-sm font-bold">🎉 LINEで簡単注文 | 学生の味方！</span>
+            <span className="text-base md:text-lg font-bold">🎉 LINEで簡単注文 | 学生の味方！</span>
           </div>
         </div>
 
@@ -41,9 +41,9 @@ export default function Returns() {
                 {/* Primary CTA Button */}
                 <Link
                   href="https://line.me/R/ti/p/@895gydcc"
-                  className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition flex items-center gap-1 whitespace-nowrap shrink-0"
+                  className="bg-green-500 text-white px-6 py-3 rounded-full font-bold text-base md:text-lg hover:bg-green-600 transition flex items-center gap-2 whitespace-nowrap shrink-0 min-h-[48px]"
                 >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.84 5.42-1.19 7.18-.15.76-.45 1.02-.75 1.04-.64.04-1.13-.42-1.75-.83-.97-.64-1.52-1.03-2.47-1.66-1.09-.71-.38-1.1.24-1.74.16-.16 2.92-2.68 2.98-2.91.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-2.03 1.29-5.73 3.78-.54.37-1.03.56-1.47.55-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.43-1.46-.91.03-.25.46-.51 1.28-.78 5.01-2.18 8.35-3.63 10.02-4.35 1.43-.61 1.72-.72 1.91-.72.04 0 .14 0 .2.07.05.05.06.14.06.18-.01.06-.01.24-.02.38z"/>
                   </svg>
                   LINEで相談
@@ -52,9 +52,9 @@ export default function Returns() {
                 {/* Menu Toggle */}
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="p-2 rounded-lg hover:bg-gray-100 shrink-0"
+                  className="p-3 rounded-lg hover:bg-gray-100 shrink-0 min-h-[48px] min-w-[48px] flex items-center justify-center"
                 >
-                  {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                  {isMenuOpen ? <X className="w-7 h-7 md:w-8 md:h-8" /> : <Menu className="w-7 h-7 md:w-8 md:h-8" />}
                 </button>
               </div>
             </div>
@@ -74,46 +74,46 @@ export default function Returns() {
               />
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-gray-100"
+                className="p-3 rounded-lg hover:bg-gray-100 min-h-[48px] min-w-[48px] flex items-center justify-center"
               >
-                <X className="w-6 h-6" />
+                <X className="w-7 h-7 md:w-8 md:h-8" />
               </button>
             </div>
 
             {/* Menu Items */}
             <div className="flex-1 p-6">
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <Link
                   href="/"
-                  className="block text-xl font-semibold text-gray-800 hover:text-sparkle-pink transition"
+                  className="block text-xl md:text-2xl font-semibold text-gray-800 hover:text-sparkle-pink transition py-4 min-h-[48px] flex items-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   ホーム
                 </Link>
                 <Link
                   href="/products"
-                  className="block text-xl font-semibold text-gray-800 hover:text-sparkle-pink transition"
+                  className="block text-xl md:text-2xl font-semibold text-gray-800 hover:text-sparkle-pink transition py-4 min-h-[48px] flex items-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   商品一覧
                 </Link>
                 <Link
                   href="/guide"
-                  className="block text-xl font-semibold text-gray-800 hover:text-sparkle-pink transition"
+                  className="block text-xl md:text-2xl font-semibold text-gray-800 hover:text-sparkle-pink transition py-4 min-h-[48px] flex items-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   ご利用ガイド
                 </Link>
                 <Link
                   href="/company"
-                  className="block text-xl font-semibold text-gray-800 hover:text-sparkle-pink transition"
+                  className="block text-xl md:text-2xl font-semibold text-gray-800 hover:text-sparkle-pink transition py-4 min-h-[48px] flex items-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   会社概要
                 </Link>
                 <Link
                   href="/products"
-                  className="block bg-sparkle-pink text-white px-6 py-3 rounded-full text-center font-bold hover:bg-pink-600 transition"
+                  className="block bg-sparkle-pink text-white px-6 py-4 rounded-full text-center text-xl md:text-2xl font-bold hover:bg-pink-600 transition min-h-[48px] flex items-center justify-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   お見積もり
@@ -129,21 +129,24 @@ export default function Returns() {
         <WavePatternTop />
         
         <div className="mx-auto">
-          <h1 className="text-2xl font-bold text-center mb-6 text-sparkle-blue">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-sparkle-pink to-sparkle-turquoise bg-clip-text text-transparent">
             返品・交換に関する特約
           </h1>
+          <p className="text-xl md:text-2xl text-gray-600 text-center mb-8">
+            返品・交換についてのご案内
+          </p>
           
-          <div className="bg-white rounded-lg shadow-lg p-6 space-y-6">
+          <div className="bg-white rounded-lg shadow-lg p-8 space-y-8">
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">1. 返品・交換について</h2>
-              <p className="text-gray-700 leading-relaxed">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">1. 返品・交換について</h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 お客様都合による返品・交換は、原則として承っておりません。ただし、以下の場合に限り、返品・交換を承ります。
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">2. 返品・交換可能な場合</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">2. 返品・交換可能な場合</h2>
+              <ul className="list-disc list-inside text-lg md:text-xl text-gray-700 space-y-3">
                 <li>商品に明らかな不具合がある場合</li>
                 <li>ご注文内容と異なる商品が届いた場合</li>
                 <li>配送中の破損により商品が損傷した場合</li>
@@ -152,8 +155,8 @@ export default function Returns() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">3. 返品・交換の条件</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">3. 返品・交換の条件</h2>
+              <ul className="list-disc list-inside text-lg md:text-xl text-gray-700 space-y-3">
                 <li>商品到着後7日以内にご連絡いただくこと</li>
                 <li>商品が未使用・未開封の状態であること</li>
                 <li>商品のタグや包装が損なわれていないこと</li>
@@ -162,8 +165,8 @@ export default function Returns() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">4. 返品・交換の手続き</h2>
-              <ol className="list-decimal list-inside text-gray-700 space-y-2">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">4. 返品・交換の手続き</h2>
+              <ol className="list-decimal list-inside text-lg md:text-xl text-gray-700 space-y-3">
                 <li>まずはお電話またはメールにてご連絡ください</li>
                 <li>返品・交換理由をお聞かせください</li>
                 <li>弊社にて確認後、返品・交換方法をご案内いたします</li>
@@ -172,88 +175,127 @@ export default function Returns() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">5. 返品・交換にかかる費用</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>弊社の責任による場合：返送料は弊社負担</li>
-                <li>お客様都合による場合：返送料はお客様負担</li>
-                <li>交換商品の送料は弊社負担</li>
-              </ul>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">5. 返品・交換にかかる費用</h2>
+              <div className="space-y-4">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-blue-900 mb-3 text-xl md:text-2xl">弊社の責任による場合</h3>
+                  <p className="text-blue-800 text-lg md:text-xl">返送料は弊社負担</p>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-gray-900 mb-3 text-xl md:text-2xl">お客様都合による場合</h3>
+                  <p className="text-gray-700 text-lg md:text-xl">返送料はお客様負担</p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-green-900 mb-3 text-xl md:text-2xl">交換商品の送料</h3>
+                  <p className="text-green-800 text-lg md:text-xl">弊社負担</p>
+                </div>
+              </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">6. 返金について</h2>
-              <p className="text-gray-700 leading-relaxed">
-                返品が承認された場合、商品代金を返金いたします。返金方法は、原則としてお支払い方法と同じ方法で行います。返金処理には1〜2週間程度お時間をいただく場合があります。
-              </p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">6. 返金について</h2>
+              <div className="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+                <p>
+                  返品が承認された場合、商品代金を返金いたします。返金方法は、原則としてお支払い方法と同じ方法で行います。返金処理には1〜2週間程度お時間をいただく場合があります。
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>クレジットカード：カード会社経由での返金</li>
+                  <li>銀行振込：指定口座への振込</li>
+                  <li>代金引換：銀行振込での返金</li>
+                </ul>
+              </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold mb-4 text-sparkle-blue">7. お問い合わせ</h2>
-              <div className="text-gray-700 space-y-2">
-                <p>返品・交換に関するお問い合わせは、以下までご連絡ください。</p>
-                <div className="flex items-center space-x-2">
-                  <Phone size={16} />
-                  <span>電話：070-9362-9828</span>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-sparkle-blue">7. お問い合わせ</h2>
+              <div className="bg-yellow-50 p-6 rounded-lg">
+                <h3 className="font-semibold text-yellow-900 mb-3 text-xl md:text-2xl">返品・交換に関するご相談</h3>
+                <p className="text-yellow-800 mb-4 text-lg md:text-xl">返品・交換に関するお問い合わせは、以下までご連絡ください。</p>
+                <div className="space-y-3 text-yellow-800 text-lg md:text-xl">
+                  <div className="flex items-center space-x-3">
+                    <Phone size={20} />
+                    <span>電話：070-9362-9828</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Mail size={20} />
+                    <span>メール：contact@la-muse.org</span>
+                  </div>
+                  <p className="text-lg text-yellow-700">受付時間：平日 9:00〜18:00</p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Mail size={16} />
-                  <span>メール：contact@la-muse.org</span>
-                </div>
-                <p className="text-sm text-gray-500">受付時間：平日 9:00〜18:00</p>
               </div>
             </section>
           </div>
         </div>
+        
+        {/* CTA Section */}
+        <section className="bg-sparkle-pink text-white py-16 mx-4 rounded-lg mb-8">
+          <div className="text-center px-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              ご不明な点がございましたら
+            </h2>
+            <p className="text-xl md:text-2xl mb-8">
+              お気軽にLINEでご相談ください
+            </p>
+            <Link
+              href="https://line.me/R/ti/p/@895gydcc"
+              className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg md:text-xl min-h-[60px]"
+            >
+              <svg className="mr-3 w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.84 5.42-1.19 7.18-.15.76-.45 1.02-.75 1.04-.64.04-1.13-.42-1.75-.83-.97-.64-1.52-1.03-2.47-1.66-1.09-.71-.38-1.1.24-1.74.16-.16 2.92-2.68 2.98-2.91.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-2.03 1.29-5.73 3.78-.54.37-1.03.56-1.47.55-.48-.01-1.41-.27-2.1-.5-.85-.28-1.52-.43-1.46-.91.03-.25.46-.51 1.28-.78 5.01-2.18 8.35-3.63 10.02-4.35 1.43-.61 1.72-.72 1.91-.72.04 0 .14 0 .2.07.05.05.06.14.06.18-.01.06-.01.24-.02.38z"/>
+              </svg>
+              LINEで相談する
+            </Link>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="px-4">
-          <div className="grid grid-cols-1 gap-8 mb-8">
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="px-6">
+          <div className="grid grid-cols-1 gap-10 mb-10">
             <div>
-              <h3 className="text-xl font-bold mb-4">ご注文について</h3>
-              <ul className="space-y-2">
-                <Link href="/returns" className="block hover:text-sparkle-pink transition">返品・交換に関する特約</Link>
-                <Link href="/shipping" className="block hover:text-sparkle-pink transition">配送事項</Link>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">ご注文について</h3>
+              <ul className="space-y-4">
+                <Link href="/returns" className="block hover:text-sparkle-pink transition text-lg md:text-xl py-2 min-h-[48px] flex items-center">返品・交換に関する特約</Link>
+                <Link href="/shipping" className="block hover:text-sparkle-pink transition text-lg md:text-xl py-2 min-h-[48px] flex items-center">配送事項</Link>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">加工方法について</h3>
-              <ul className="space-y-2">
-                <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
-
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">加工方法について</h3>
+              <ul className="space-y-4">
+                <Link href="/products" className="block hover:text-sparkle-pink transition text-lg md:text-xl py-2 min-h-[48px] flex items-center">お見積もりフォーム</Link>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">CRATee'sについて</h3>
-              <ul className="space-y-2">
-                <Link href="/company" className="block hover:text-sparkle-pink transition">会社概要</Link>
-                <Link href="/legal" className="block hover:text-sparkle-pink transition">特定商取引に基づく表記</Link>
-                <Link href="/privacy" className="block hover:text-sparkle-pink transition">プライバシーポリシー</Link>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">CRATee'sについて</h3>
+              <ul className="space-y-4">
+                <Link href="/company" className="block hover:text-sparkle-pink transition text-lg md:text-xl py-2 min-h-[48px] flex items-center">会社概要</Link>
+                <Link href="/legal" className="block hover:text-sparkle-pink transition text-lg md:text-xl py-2 min-h-[48px] flex items-center">特定商取引に基づく表記</Link>
+                <Link href="/privacy" className="block hover:text-sparkle-pink transition text-lg md:text-xl py-2 min-h-[48px] flex items-center">プライバシーポリシー</Link>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-8">
+          <div className="border-t border-gray-700 pt-10">
             <div className="text-center">
-              <div className="text-xs text-gray-400 space-y-2">
-                <div className="flex justify-center items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-3 h-3" />
+              <div className="text-lg md:text-xl text-gray-400 space-y-4">
+                <div className="flex justify-center items-center gap-6 flex-wrap">
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5" />
                     <span>070-9362-9828</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-3 h-3" />
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5" />
                     <span>contact@la-muse.org</span>
                   </div>
                 </div>
-                <div className="flex justify-center items-center gap-4 mt-4">
-                  <Link href="https://www.instagram.com/cla_tees?igsh=MTNtdWJ4bm5nYWRmbg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
-                    <Instagram className="w-5 h-5" />
+                <div className="flex justify-center items-center gap-6 mt-6">
+                  <Link href="https://www.instagram.com/cla_tees?igsh=MTNtdWJ4bm5nYWRmbg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition p-3 min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <Instagram className="w-8 h-8" />
                   </Link>
-                  <Link href="https://www.tiktok.com/@clatees?_t=ZS-8zO4FkW6JrM&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <Link href="https://www.tiktok.com/@clatees?_t=ZS-8zO4FkW6JrM&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition p-3 min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                     </svg>
                   </Link>
@@ -262,11 +304,11 @@ export default function Returns() {
             </div>
           </div>
 
-          <div className="text-center mt-8 pt-8 border-t border-gray-700">
-            <p className="text-sm">
+          <div className="text-center mt-10 pt-10 border-t border-gray-700">
+            <p className="text-lg md:text-xl">
               © 株式会社LaMuse
             </p>
-            <p className="text-xs mt-2">
+            <p className="text-base md:text-lg mt-3">
               思い出作りを全力でサポート致します。
             </p>
           </div>

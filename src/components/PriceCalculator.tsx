@@ -45,8 +45,8 @@ export const PriceCalculator: React.FC = () => {
   const priceInfo = selectedPlan === "custom" ? calculateCustomPrice() : calculateUniformPrice();
 
   return (
-    <div className="py-16 bg-gradient-to-br from-sparkle-pink/10 to-sparkle-turquoise/10">
-      <div className="px-4">
+    <div className="py-8 md:py-12 lg:py-16 bg-gradient-to-br from-sparkle-pink/10 to-sparkle-turquoise/10">
+      <div className="px-4 md:px-6 lg:px-8">
         {/* <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
             圧倒的コスパ！<br />選べる2つの料金プラン
@@ -93,8 +93,8 @@ export const PriceCalculator: React.FC = () => {
             </button>
           </div> */}
           {/* 料金表と計算機 */}
-          <div className="bg-white rounded-3xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+          <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl p-4 md:p-6 lg:p-8">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 text-gray-800">
               簡単お見積もり計算機
             </h2>
             {selectedPlan === "custom" ? (
@@ -104,42 +104,42 @@ export const PriceCalculator: React.FC = () => {
                 </h3>
                 
                 {/* 料金表 */}
-                <div className="mb-8 overflow-x-auto max-w-4xl mx-auto">
+                <div className="mb-6 md:mb-8 overflow-x-auto max-w-4xl mx-auto">
                   <table className="w-full border-collapse min-w-[600px]">
                     <thead>
                       <tr className="bg-gray-100">
-                        <th className="border p-4 text-left w-1/5">商品</th>
-                        <th className="border p-4 text-center w-1/5">① 無地</th>
-                        <th className="border p-4 text-center w-1/5">② 片面プリント<br /><span className="text-sm font-normal">(前面 or 背面)</span></th>
-                        <th className="border p-4 text-center w-1/5">③ 両面プリント<br /><span className="text-sm font-normal">(前面 ＋ 背面)</span></th>
+                        <th className="border p-2 md:p-4 text-left w-1/5 text-sm md:text-base">商品</th>
+                        <th className="border p-2 md:p-4 text-center w-1/5 text-sm md:text-base">① 無地</th>
+                        <th className="border p-2 md:p-4 text-center w-1/5 text-sm md:text-base">② 片面プリント<br /><span className="text-xs md:text-sm font-normal">(前面 or 背面)</span></th>
+                        <th className="border p-2 md:p-4 text-center w-1/5 text-sm md:text-base">③ 両面プリント<br /><span className="text-xs md:text-sm font-normal">(前面 ＋ 背面)</span></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border p-4 font-bold">Tシャツ</td>
-                        <td className="border p-4 text-center">980円</td>
-                        <td className="border p-4 text-center font-bold text-sparkle-pink">1,300円</td>
-                        <td className="border p-4 text-center">1,600円</td>
+                        <td className="border p-2 md:p-4 font-bold text-sm md:text-base">Tシャツ</td>
+                        <td className="border p-2 md:p-4 text-center text-sm md:text-base">980円</td>
+                        <td className="border p-2 md:p-4 text-center font-bold text-sparkle-pink text-sm md:text-base">1,300円</td>
+                        <td className="border p-2 md:p-4 text-center text-sm md:text-base">1,600円</td>
                       </tr>
                       <tr>
-                        <td className="border p-4 font-bold">ポロシャツ</td>
-                        <td className="border p-4 text-center">1,980円</td>
-                        <td className="border p-4 text-center font-bold text-sparkle-pink">2,200円</td>
-                        <td className="border p-4 text-center">2,500円</td>
+                        <td className="border p-2 md:p-4 font-bold text-sm md:text-base">ポロシャツ</td>
+                        <td className="border p-2 md:p-4 text-center text-sm md:text-base">1,980円</td>
+                        <td className="border p-2 md:p-4 text-center font-bold text-sparkle-pink text-sm md:text-base">2,200円</td>
+                        <td className="border p-2 md:p-4 text-center text-sm md:text-base">2,500円</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
                 {/* 選択フォーム */}
-                <div className="space-y-6">
-                  <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
+                  <div className="space-y-4 md:space-y-6">
                     <div>
                       <label className="block text-sm font-bold mb-2">商品タイプ</label>
                       <div className="flex gap-2">
                         <button
                           onClick={() => setProductType("tshirt")}
-                          className={`flex-1 py-3 px-4 rounded-lg font-bold transition ${
+                          className={`flex-1 py-2 md:py-3 px-3 md:px-4 rounded-lg font-bold transition text-sm md:text-base ${
                             productType === "tshirt"
                               ? "bg-sparkle-pink text-white"
                               : "bg-gray-100 hover:bg-gray-200"
@@ -149,7 +149,7 @@ export const PriceCalculator: React.FC = () => {
                         </button>
                         <button
                           onClick={() => setProductType("polo")}
-                          className={`flex-1 py-3 px-4 rounded-lg font-bold transition ${
+                          className={`flex-1 py-2 md:py-3 px-3 md:px-4 rounded-lg font-bold transition text-sm md:text-base ${
                             productType === "polo"
                               ? "bg-sparkle-pink text-white"
                               : "bg-gray-100 hover:bg-gray-200"
@@ -165,7 +165,7 @@ export const PriceCalculator: React.FC = () => {
                       <div className="space-y-2">
                         <button
                           onClick={() => setPrintSides("none")}
-                          className={`w-full py-3 px-4 rounded-lg text-left transition ${
+                          className={`w-full py-2 md:py-3 px-3 md:px-4 rounded-lg text-left transition text-sm md:text-base ${
                             printSides === "none"
                               ? "bg-sparkle-pink text-white"
                               : "bg-gray-100 hover:bg-gray-200"
@@ -175,7 +175,7 @@ export const PriceCalculator: React.FC = () => {
                         </button>
                         <button
                           onClick={() => setPrintSides("single")}
-                          className={`w-full py-3 px-4 rounded-lg text-left transition ${
+                          className={`w-full py-2 md:py-3 px-3 md:px-4 rounded-lg text-left transition text-sm md:text-base ${
                             printSides === "single"
                               ? "bg-sparkle-pink text-white"
                               : "bg-gray-100 hover:bg-gray-200"
@@ -185,7 +185,7 @@ export const PriceCalculator: React.FC = () => {
                         </button>
                         <button
                           onClick={() => setPrintSides("double")}
-                          className={`w-full py-3 px-4 rounded-lg text-left transition ${
+                          className={`w-full py-2 md:py-3 px-3 md:px-4 rounded-lg text-left transition text-sm md:text-base ${
                             printSides === "double"
                               ? "bg-sparkle-pink text-white"
                               : "bg-gray-100 hover:bg-gray-200"
@@ -204,7 +204,7 @@ export const PriceCalculator: React.FC = () => {
                       min="1"
                       value={quantity}
                       onChange={(e) => setQuantity(Number(e.target.value))}
-                      className="w-full p-3 border-2 border-gray-200 rounded-lg"
+                      className="w-full p-2.5 md:p-3 border-2 border-gray-200 rounded-lg text-sm md:text-base"
                     />
                   </div>
 
@@ -214,9 +214,9 @@ export const PriceCalculator: React.FC = () => {
                         type="checkbox"
                         checked={sizeProtection}
                         onChange={(e) => setSizeProtection(e.target.checked)}
-                        className="mr-3 w-5 h-5"
+                        className="mr-3 w-4 h-4 md:w-5 md:h-5"
                       />
-                      <span>サイズ交換保証を追加（1枚500円）</span>
+                      <span className="text-sm md:text-base">サイズ交換保証を追加（1枚500円）</span>
                     </label>
                   </div>
                   
@@ -356,33 +356,33 @@ export const PriceCalculator: React.FC = () => {
             )}
 
             {/* 価格表示 */}
-            <div className="mt-8 bg-gradient-to-r from-sparkle-pink/10 to-sparkle-turquoise/10 rounded-2xl p-6">
+            <div className="mt-6 md:mt-8 bg-gradient-to-r from-sparkle-pink/10 to-sparkle-turquoise/10 rounded-xl md:rounded-2xl p-4 md:p-6">
               <div className="text-center">
-                <p className="text-sm text-gray-600 mb-2">お会計合計</p>
-                <div className="text-4xl font-bold text-sparkle-pink mb-2">
+                <p className="text-xs md:text-sm text-gray-600 mb-2">お会計合計</p>
+                <div className="text-2xl md:text-4xl font-bold text-sparkle-pink mb-2">
                   ¥{priceInfo.subtotal.toLocaleString()}
-                  <span className="text-sm text-gray-600 ml-2">（税込）</span>
+                  <span className="text-xs md:text-sm text-gray-600 ml-2">（税込）</span>
                 </div>
-                <p className="text-lg">
+                <p className="text-base md:text-lg">
                   1枚あたり <span className="font-bold">¥{priceInfo.unitPrice.toLocaleString()}</span>
                 </p>
                 {priceInfo.sizeProtectionCost > 0 && (
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-xs md:text-sm text-gray-600 mt-2">
                     （サイズ交換保証料 ¥{priceInfo.sizeProtectionCost.toLocaleString()} 含む）
                   </p>
                 )}
               </div>
 
-              <div className="mt-6 space-y-3">
-                <Link href="/products" className="block w-full bg-sparkle-pink text-white py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition text-center">
+              <div className="mt-4 md:mt-6 space-y-2 md:space-y-3">
+                <Link href="/products" className="block w-full bg-sparkle-pink text-white py-2.5 md:py-3 rounded-full font-bold hover:bg-sparkle-pink-dark transition text-center text-sm md:text-base">
                   正式な見積もりを依頼
                 </Link>
-                <a href="https://line.me/R/ti/p/@895gydcc" target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white py-3 rounded-full font-bold hover:bg-green-600 transition text-center">
+                <a href="https://line.me/R/ti/p/@895gydcc" target="_blank" rel="noopener noreferrer" className="block w-full bg-green-500 text-white py-2.5 md:py-3 rounded-full font-bold hover:bg-green-600 transition text-center text-sm md:text-base">
                   LINEで相談する
                 </a>
               </div>
 
-              <div className="mt-6 text-center">
+              <div className="mt-4 md:mt-6 text-center">
                 <p className="text-xs text-gray-500">
                   ※ 上記はすべて税込み価格です<br />
                   ※ 30枚以上のご注文で送料無料！
@@ -392,17 +392,17 @@ export const PriceCalculator: React.FC = () => {
           </div>
 
           {/* 共通オプション */}
-          <div className="mt-8 bg-white rounded-2xl shadow-lg p-6">
-            <h4 className="text-lg font-bold mb-4">【共通オプション】</h4>
+          <div className="mt-6 md:mt-8 bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-6">
+            <h4 className="text-base md:text-lg font-bold mb-3 md:mb-4">【共通オプション】</h4>
             <table className="w-full">
               <tbody>
                 <tr className="border-b">
-                  <td className="py-2">サイズ交換保証</td>
-                  <td className="py-2 text-right font-bold">1枚 500円</td>
+                  <td className="py-2 text-sm md:text-base">サイズ交換保証</td>
+                  <td className="py-2 text-right font-bold text-sm md:text-base">1枚 500円</td>
                 </tr>
                 <tr className="border-b">
-                  <td className="py-2">先生分</td>
-                  <td className="py-2 text-right font-bold text-sparkle-pink">無料！</td>
+                  <td className="py-2 text-sm md:text-base">先生分</td>
+                  <td className="py-2 text-right font-bold text-sparkle-pink text-sm md:text-base">無料！</td>
                 </tr>
               </tbody>
             </table>
