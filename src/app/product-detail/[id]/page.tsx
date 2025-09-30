@@ -259,12 +259,15 @@ export default function ProductDetail() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2">
                   <Image
-                    src="/logo.png"
-                    alt="Sparkle Logo"
-                    width={120}
-                    height={40}
-                    className="h-8 w-auto"
-                  />
+                  src="/logo.png"
+                  alt="Sparkle Logo"
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto"
+                  priority
+                  quality={90}
+                  sizes="120px"
+                />
                 </Link>
 
                 {/* Menu Toggle */}
@@ -339,6 +342,9 @@ export default function ProductDetail() {
                     alt={product.name}
                     fill
                     className="object-contain"
+                    priority
+                    quality={90}
+                    sizes="(max-width: 430px) 100vw, 430px"
                   />
                 )}
               </div>
@@ -358,6 +364,8 @@ export default function ProductDetail() {
                       alt={`${product.name} ${index + 1}`}
                       fill
                       className="object-cover"
+                      quality={85}
+                      sizes="80px"
                     />
                   </button>
                 ))}
@@ -367,10 +375,10 @@ export default function ProductDetail() {
 
           {/* Product Info */}
           <div className="px-4 pb-6">
-            <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
-            <p className="text-3xl font-bold text-sparkle-pink mb-4">¥{product.price.toLocaleString()}〜</p>
-            <p className="text-gray-600 mb-4">{product.description}</p>
-            <div className="text-sm text-gray-500">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">{product.name}</h1>
+            <p className="text-4xl md:text-5xl font-bold text-sparkle-pink mb-4">¥{product.price.toLocaleString()}〜</p>
+            <p className="text-gray-600 mb-4 text-lg md:text-xl">{product.description}</p>
+            <div className="text-base md:text-lg text-gray-500">
               <p>素材: {product.material}</p>
               <p>カラー: {product.colors.length}色展開</p>
             </div>
@@ -381,7 +389,7 @@ export default function ProductDetail() {
             <div className="flex border-b">
               <button
                 onClick={() => setActiveTab("details")}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+                className={`px-6 py-3 text-base md:text-lg font-medium border-b-2 transition min-h-[48px] ${
                   activeTab === "details"
                     ? "border-sparkle-pink text-sparkle-pink"
                     : "border-transparent text-gray-500 hover:text-gray-700"
@@ -391,7 +399,7 @@ export default function ProductDetail() {
               </button>
               <button
                 onClick={() => setActiveTab("size")}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+                className={`px-6 py-3 text-base md:text-lg font-medium border-b-2 transition min-h-[48px] ${
                   activeTab === "size"
                     ? "border-sparkle-pink text-sparkle-pink"
                     : "border-transparent text-gray-500 hover:text-gray-700"
@@ -401,7 +409,7 @@ export default function ProductDetail() {
               </button>
               <button
                 onClick={() => setActiveTab("pricing")}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+                className={`px-6 py-3 text-base md:text-lg font-medium border-b-2 transition min-h-[48px] ${
                   activeTab === "pricing"
                     ? "border-sparkle-pink text-sparkle-pink"
                     : "border-transparent text-gray-500 hover:text-gray-700"
@@ -417,23 +425,23 @@ export default function ProductDetail() {
             {activeTab === "details" && (
               <div className="space-y-6">
                 {/* 商品説明 */}
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-bold text-lg mb-2">商品について</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="font-bold text-xl md:text-2xl mb-3">商品について</h3>
+                  <p className="text-gray-700 leading-relaxed text-base md:text-lg">
                     {product.description}
                   </p>
                 </div>
 
                 {/* CTAボタンエリア */}
-                <div className="space-y-3">
+                <div className="space-y-4">
 
                   
                   {/* 購入ボタン（工事中ページへリダイレクト） */}
                   <Link
                     href="/under-construction"
-                    className="block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 px-6 rounded-full font-bold text-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                    className="block w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-5 md:py-6 px-8 rounded-full font-bold text-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg md:text-xl min-h-[56px]"
                   >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
                       <path d="M9 8V17H11V8H9ZM13 8V17H15V8H13Z"/>
                     </svg>
@@ -445,9 +453,9 @@ export default function ProductDetail() {
                     href="https://line.me/R/ti/p/@your-line-id"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-6 rounded-full font-bold text-center hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 mt-3"
+                    className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-5 md:py-6 px-8 rounded-full font-bold text-center hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg md:text-xl min-h-[56px]"
                   >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <svg className="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
                     </svg>
                     💬 LINEで相談
@@ -528,49 +536,49 @@ export default function ProductDetail() {
           <div className="px-4">
             <div className="grid grid-cols-1 gap-8 mb-8">
               <div>
-                <h3 className="text-xl font-bold mb-4">ご注文について</h3>
-                <ul className="space-y-2">
-                  <Link href="/returns" className="block hover:text-sparkle-pink transition">返品・交換に関する特約</Link>
-                  <Link href="/shipping" className="block hover:text-sparkle-pink transition">配送事項</Link>
+                <h3 className="text-xl md:text-2xl font-bold mb-4">ご注文について</h3>
+                <ul className="space-y-3">
+                  <Link href="/returns" className="block hover:text-sparkle-pink transition py-2 min-h-[48px] flex items-center text-base md:text-lg">返品・交換に関する特約</Link>
+                  <Link href="/shipping" className="block hover:text-sparkle-pink transition py-2 min-h-[48px] flex items-center text-base md:text-lg">配送事項</Link>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-4">加工方法について</h3>
-                <ul className="space-y-2">
-                  <Link href="/products" className="block hover:text-sparkle-pink transition">お見積もりフォーム</Link>
+                <h3 className="text-xl md:text-2xl font-bold mb-4">加工方法について</h3>
+                <ul className="space-y-3">
+                  <Link href="/products" className="block hover:text-sparkle-pink transition py-2 min-h-[48px] flex items-center text-base md:text-lg">お見積もりフォーム</Link>
 
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-4">CRATee'sについて</h3>
-                <ul className="space-y-2">
-                  <Link href="/company" className="block hover:text-sparkle-pink transition">会社概要</Link>
-                  <Link href="/legal" className="block hover:text-sparkle-pink transition">特定商取引に基づく表記</Link>
-                  <Link href="/privacy" className="block hover:text-sparkle-pink transition">プライバシーポリシー</Link>
+                <h3 className="text-xl md:text-2xl font-bold mb-4">CRATee'sについて</h3>
+                <ul className="space-y-3">
+                  <Link href="/company" className="block hover:text-sparkle-pink transition py-2 min-h-[48px] flex items-center text-base md:text-lg">会社概要</Link>
+                  <Link href="/legal" className="block hover:text-sparkle-pink transition py-2 min-h-[48px] flex items-center text-base md:text-lg">特定商取引に基づく表記</Link>
+                  <Link href="/privacy" className="block hover:text-sparkle-pink transition py-2 min-h-[48px] flex items-center text-base md:text-lg">プライバシーポリシー</Link>
                 </ul>
               </div>
             </div>
 
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center">
-                <div className="text-xs text-gray-400 space-y-2">
-                  <div className="flex justify-center items-center gap-4">
+                <div className="text-base md:text-lg text-gray-400 space-y-3">
+                  <div className="flex justify-center items-center gap-6">
                     <div className="flex items-center gap-2">
-                      <Phone className="w-3 h-3" />
+                      <Phone className="w-4 h-4 md:w-5 md:h-5" />
                       <span>070-9362-9828</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Mail className="w-3 h-3" />
+                      <Mail className="w-4 h-4 md:w-5 md:h-5" />
                       <span>contact@la-muse.org</span>
                     </div>
                   </div>
-                  <div className="flex justify-center items-center gap-4 mt-4">
-                    <Link href="https://www.instagram.com/cla_tees?igsh=MTNtdWJ4bm5nYWRmbg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
-                      <Instagram className="w-5 h-5" />
+                  <div className="flex justify-center items-center gap-6 mt-6">
+                    <Link href="https://www.instagram.com/cla_tees?igsh=MTNtdWJ4bm5nYWRmbg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition p-2 min-w-[48px] min-h-[48px] flex items-center justify-center">
+                      <Instagram className="w-7 h-7 md:w-8 md:h-8" />
                     </Link>
-                    <Link href="https://www.tiktok.com/@clatees?_t=ZS-8zO4FkW6JrM&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition">
-                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <Link href="https://www.tiktok.com/@clatees?_t=ZS-8zO4FkW6JrM&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-sparkle-pink transition p-2 min-w-[48px] min-h-[48px] flex items-center justify-center">
+                      <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                       </svg>
                     </Link>
@@ -580,10 +588,10 @@ export default function ProductDetail() {
             </div>
 
             <div className="text-center mt-8 pt-8 border-t border-gray-700">
-              <p className="text-sm">
+              <p className="text-base md:text-lg">
                 © 株式会社LaMuse
               </p>
-              <p className="text-xs mt-2">
+              <p className="text-base md:text-lg mt-2">
                 思い出作りを全力でサポート致します。
               </p>
             </div>

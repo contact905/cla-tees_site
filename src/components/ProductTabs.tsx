@@ -642,18 +642,18 @@ export const ProductTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState("soccer");
 
   return (
-    <section className="pb-16 bg-white">
-      <div className="px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 mt-4">商品ラインナップ</h2>
-        <p className="text-center text-gray-600 mb-8 text-sm sm:text-base">クラT・前面デザイン済みユニフォームから選択</p>
+    <section className="pb-8 md:pb-12 lg:pb-16 bg-white">
+      <div className="px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 lg:mb-8 mt-4 md:mt-6 lg:mt-8">商品ラインナップ</h2>
+        <p className="text-center text-gray-600 mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl lg:text-2xl">クラT・前面デザイン済みユニフォームから選択</p>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3 lg:gap-4 mb-6 md:mb-8 lg:mb-10">
           {Object.entries(productCategories).map(([key, category]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
-              className={`px-4 py-3 rounded-full font-bold transition text-sm ${
+              className={`px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 rounded-full font-bold transition text-base md:text-lg lg:text-xl min-h-[48px] min-w-[120px] ${
                 activeTab === key
                   ? "bg-sparkle-pink text-white shadow-lg"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -670,53 +670,54 @@ export const ProductTabs: React.FC = () => {
             <Swiper
               className="product-swiper"
               modules={[Autoplay, Navigation]}
-              spaceBetween={20}
-              slidesPerView={2}
+              spaceBetween={16}
+              slidesPerView={1.2}
               centeredSlides={false}
               loop={true}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               navigation={true}
               breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 25 },
-                768: { slidesPerView: 2, spaceBetween: 30 },
-                1024: { slidesPerView: 2, spaceBetween: 35 },
+                480: { slidesPerView: 1.5, spaceBetween: 20 },
+                640: { slidesPerView: 2, spaceBetween: 24 },
+                768: { slidesPerView: 2.5, spaceBetween: 28 },
+                1024: { slidesPerView: 3, spaceBetween: 32 },
+                1280: { slidesPerView: 3.5, spaceBetween: 36 },
               }}
             >
               {productCategories[activeTab].products.map((product) => (
                 <SwiperSlide key={product.id}>
                   <div
                     key={product.id}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group w-full max-w-7xl mx-auto"
+                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group w-full mx-auto"
                   >
-                    <div className="relative h-64 bg-gray-50 overflow-hidden rounded-t-3xl">
+                    <div className="relative h-48 md:h-56 lg:h-64 bg-gray-50 overflow-hidden rounded-t-3xl">
                       <Image
                         src={product.image || "/api/placeholder/400/400"}
                         alt={product.name}
                         fill
                         className="object-contain transition-transform duration-300 object-center"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: 480px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
                       />
 
-
                       {product.colors && product.colors > 0 && (
-                        <div className="absolute bottom-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold shadow z-10">
+                        <div className="absolute bottom-2 md:bottom-3 lg:bottom-4 right-2 md:right-3 lg:right-4 bg-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold shadow z-10">
                           {product.colors}色
                         </div>
                       )}
                     </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-bold mb-2 h-12">{product.name}</h3>
+                    <div className="p-3 md:p-4 lg:p-5">
+                      <h3 className="text-sm md:text-base lg:text-lg font-bold mb-2 h-10 md:h-12 lg:h-14 line-clamp-2">{product.name}</h3>
                       {!product.isTemplate && (
                         <>
-                          <p className="text-2xl font-bold text-sparkle-pink mb-2">
+                          <p className="text-lg md:text-xl lg:text-2xl font-bold text-sparkle-pink mb-2">
                             {product.price}
                           </p>
                           {product.sizes && (
-                            <p className="text-gray-600 text-sm mb-4">
+                            <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4">
                               サイズ: {product.sizes}
                             </p>
                           )}
-                          <Link href={`/product-detail/${product.id}`} className="w-full bg-sparkle-pink text-white py-2 px-8 rounded-full font-bold text-sm hover:bg-sparkle-pink-dark transition">
+                          <Link href={`/product-detail/${product.id}`} className="block w-full bg-sparkle-pink text-white py-2 md:py-2.5 lg:py-3 px-4 md:px-6 lg:px-8 rounded-full font-bold text-xs md:text-sm lg:text-base hover:bg-sparkle-pink-dark transition text-center">
                             詳細を見る
                           </Link>
                         </>
@@ -763,16 +764,16 @@ export const ProductTabs: React.FC = () => {
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-bold mb-2 h-12">{product.name}</h3>
-                    <p className="text-2xl font-bold text-sparkle-pink mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 h-12">{product.name}</h3>
+                    <p className="text-2xl md:text-3xl font-bold text-sparkle-pink mb-2">
                       {product.price}
                     </p>
                     {product.sizes && (
-                      <p className="text-gray-600 text-sm mb-4">
+                      <p className="text-gray-600 text-base md:text-lg mb-4">
                         サイズ: {product.sizes}
                       </p>
                     )}
-                    <Link href={`/product-detail/${product.id}`} className="w-full bg-sparkle-pink text-white py-2 px-8 rounded-full font-bold text-sm hover:bg-sparkle-pink-dark transition group-hover:scale-105">
+                    <Link href={`/product-detail/${product.id}`} className="w-full bg-sparkle-pink text-white py-3 md:py-4 px-8 rounded-full font-bold text-base md:text-lg hover:bg-sparkle-pink-dark transition group-hover:scale-105 min-h-[48px] flex items-center justify-center">
                       詳細を見る
                     </Link>
                   </div>
@@ -782,10 +783,10 @@ export const ProductTabs: React.FC = () => {
           )}
         </div>
 
-        <div className="text-center mt-8">
-          <Link href={activeTab === 'templates' ? '/products?tab=templates' : '/products'} className="inline-flex items-center gap-2 bg-sparkle-turquoise text-white px-8 py-3 rounded-full font-bold hover:bg-sparkle-turquoise-dark transition">
+        <div className="text-center mt-6 md:mt-8 lg:mt-10">
+          <Link href={activeTab === 'templates' ? '/products?tab=templates' : '/products'} className="inline-flex items-center gap-3 md:gap-4 bg-sparkle-turquoise text-white px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 rounded-full font-bold text-base md:text-lg lg:text-xl hover:bg-sparkle-turquoise-dark transition min-h-[56px]">
             {activeTab === 'templates' ? 'すべてのデザインを見る' : 'すべての商品を見る'}
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
